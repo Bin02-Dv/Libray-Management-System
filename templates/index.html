@@ -1,0 +1,36 @@
+{% extends "landingbase.html" %}
+
+{% block title %}Modern Library Management{% endblock title %}
+
+
+{% block content %}
+
+<!-- Hero -->
+<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-32">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-5xl md:text-6xl font-bold mb-6">Welcome to LibraFlow</h2>
+        <p class="text-xl mb-12 max-w-2xl mx-auto">Discover thousands of books, manage borrowings, and enjoy a seamless library experience.</p>
+        <form class="max-w-3xl mx-auto flex shadow-2xl">
+        <input type="text" placeholder="Search by title, author, or ISBN..." class="flex-1 px-6 py-4 rounded-l-lg text-gray-800 focus:outline-none"/>
+        <button type="button" onclick="alert('Search functionality coming soon!')" class="bg-white text-blue-600 px-10 py-4 rounded-r-lg font-bold hover:bg-gray-100 transition">Search</button>
+        </form>
+    </div>
+</section>
+
+<!-- Featured Books -->
+<section class="py-20 max-w-7xl mx-auto px-4">
+    <h3 class="text-4xl font-bold text-center mb-12">Featured Books</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+        <img src="https://static.vecteezy.com/system/resources/previews/052/925/339/non_2x/e-book-cover-mockup-psd.png" alt="Book" class="w-full h-96 object-cover"/>
+        <div class="p-5">
+            <h4 class="font-bold text-lg">The Great Gatsby</h4>
+            <p class="text-gray-600">F. Scott Fitzgerald</p>
+            <span class="text-green-600 font-medium">Available</span>
+        </div>
+        </div>
+        <!-- Repeat 4 more with different mockups if desired -->
+    </div>
+</section>
+
+{% endblock content %}
