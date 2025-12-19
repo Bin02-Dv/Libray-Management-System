@@ -14,5 +14,11 @@ urlpatterns = [
     path("member/reserve-book/", views.member_reserve_books, name="member-reserve-books"),
     path("member/profile/", views.member_profile, name="member-profile"),
     path("member/fines/", views.member_fines, name="member-fines"),
-    path("member/catalog/", views.member_catalog, name="member-catalog")
+    path("member/catalog/", views.member_catalog, name="member-catalog"),
+    
+    # admin section
+    path("dash/", views.admin_dash, name="dash"),
+    path("manage-books/", views.admin_manage_book, name="manage-book"),
+    path("manage-members/", views.admin_manage_members, name="manage-members"),
+    path("circulation/", views.admin_circulation, name="circulation")
 ]

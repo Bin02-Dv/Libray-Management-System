@@ -37,3 +37,18 @@ def member_fines(request):
 
 def member_catalog(request):
     return render(request, "members/catalog.html")
+
+
+# admin section
+
+def admin_dash(request):
+    return render(request, "Theadmin/dash.html")
+
+def admin_manage_book(request):
+    return render(request, "Theadmin/manage-book.html")
+
+def admin_manage_members(request):
+    return render(request, "Theadmin/manage-members.html")
+
+def admin_circulation(request):
+    return render(request, "Theadmin/circulation.html")

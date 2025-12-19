@@ -1,0 +1,73 @@
+{% extends "Theadmin/base.html" %}
+
+{% block title %}Manage Books{% endblock title %}
+
+{% block content %}
+
+<main>
+    <div class="flex justify-between items-center mb-8">
+        <input type="text" placeholder="Search books..." class="px-6 py-3 border rounded-lg w-96 focus:ring-2 focus:ring-blue-600"/>
+        <button onclick="document.getElementById('add-modal').classList.remove('hidden')" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">+ Add New Book</button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="px-6 py-4 text-left">Cover</th>
+                    <th class="px-6 py-4 text-left">Title</th>
+                    <th class="px-6 py-4 text-left">Author</th>
+                    <th class="px-6 py-4 text-left">ISBN</th>
+                    <th class="px-6 py-4 text-left">Copies</th>
+                    <th class="px-6 py-4 text-left">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t hover:bg-gray-50">
+                    <td class="px-6 py-4"><img src="https://mediamodifier.com/blog/wp-content/uploads/2020/02/01-paperback-book-cover-mockup-standing.jpg" alt="Cover" class="w-12 h-16 object-cover rounded"/></td>
+                    <td class="px-6 py-4 font-medium">1984</td>
+                    <td class="px-6 py-4">George Orwell</td>
+                    <td class="px-6 py-4">9780451524935</td>
+                    <td class="px-6 py-4">5</td>
+                    <td class="px-6 py-4 space-x-3">
+                        <button onclick="document.getElementById('edit-modal').classList.remove('hidden')" class="text-blue-600 hover:underline">Edit</button>
+                        <button onclick="if(confirm('Delete this book?')) alert('Book deleted!')" class="text-red-600 hover:underline">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<!-- Add Book Modal -->
+<div id="add-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-2xl">
+        <h3 class="text-2xl font-bold mb-6">Add New Book</h3>
+        <form>
+            <div class="grid md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Title" class="px-4 py-3 border rounded-lg"/>
+                <input type="text" placeholder="Author" class="px-4 py-3 border rounded-lg"/>
+                <input type="text" placeholder="ISBN" class="px-4 py-3 border rounded-lg"/>
+                <input type="text" placeholder="Publisher" class="px-4 py-3 border rounded-lg"/>
+                <select class="px-4 py-3 border rounded-lg"><option>Category</option><option>Fiction</option><option>Science</option></select>
+                <input type="number" placeholder="Copies Available" class="px-4 py-3 border rounded-lg"/>
+            </div>
+            <div class="mt-6">
+                <label class="block mb-2">Cover Image</label>
+                <input type="file" accept="image/*" class="w-full"/>
+            </div>
+            <div class="mt-8 flex justify-end space-x-4">
+                <button type="button" onclick="document.getElementById('add-modal').classList.add('hidden')" class="px-6 py-3 border rounded-lg hover:bg-gray-100">Cancel</button>
+                <button type="submit" onclick="alert('Book added successfully!'); document.getElementById('add-modal').classList.add('hidden')" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Add Book</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Edit Modal (same as Add, just pre-filled) -->
+<div id="edit-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<!-- Copy the same form as above, but change title to "Edit Book" and button to "Save Changes" -->
+<!-- For brevity, it's identical to add-modal but you can pre-fill values -->
+</div>
+
+{% endblock content %}
