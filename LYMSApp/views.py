@@ -23,5 +23,17 @@ def catalog(request):
 def member_dash(request):
     return render(request, "members/dash.html")
 
-def member_mooks(request):
+def member_books(request):
     return render(request, "members/my-books.html")
+
+def member_reserve_books(request):
+    return render(request, "members/reserve-books.html")
+
+def member_profile(request):
+    return render(request, "members/profile.html")
+
+def member_fines(request):
+    return render(request, "members/fines.html")
+
+def member_catalog(request):
+    return render(request, "members/catalog.html")

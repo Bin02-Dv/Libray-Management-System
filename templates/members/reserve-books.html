@@ -1,0 +1,31 @@
+{% extends "members/base.html" %}
+
+{% block title %}Reserve Books{% endblock title %}
+
+{% block content %}
+
+<main class="p-6 md:p-10">
+    <h3 class="text-3xl font-bold mb-8">Reserve a Book</h3>
+    <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h4 class="text-xl font-semibold mb-6">Search for a Book</h4>
+            <form class="mb-6">
+                <input type="text" placeholder="Title, Author, or ISBN..." class="w-full px-6 py-4 border rounded-lg focus:ring-2 focus:ring-blue-600"/>
+                <button type="button" class="mt-4 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700" onclick="alert('Search results loaded!')">Search</button>
+            </form>
+            <div class="border-t pt-6">
+                <div class="flex items-center space-x-4 mb-4">
+                    <img src="https://mediamodifier.com/blog/wp-content/uploads/2020/02/09-front-and-back-book-cover-mockup.jpg" alt="Book" class="w-20 h-28 object-cover rounded"/>
+                    <div>
+                    <h5 class="font-bold">To Kill a Mockingbird</h5>
+                    <p class="text-gray-600">Harper Lee</p>
+                    <span class="text-red-600">Currently Unavailable</span>
+                    </div>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700" onclick="alert('Hold placed successfully!')">Place Hold</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}
