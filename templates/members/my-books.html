@@ -1,0 +1,40 @@
+{% extends "members/base.html" %}
+
+{% block title %}My Books{% endblock title %}
+
+{% block content %}
+
+<main>
+    <!-- Inside <main> -->
+    <h3 class="text-3xl font-bold mb-8">My Borrowed Books</h3>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-gray-100">
+            <tr>
+                <th class="px-6 py-4 text-left">Cover</th>
+                <th class="px-6 py-4 text-left">Title</th>
+                <th class="px-6 py-4 text-left">Author</th>
+                <th class="px-6 py-4 text-left">Issued Date</th>
+                <th class="px-6 py-4 text-left">Due Date</th>
+                <th class="px-6 py-4 text-left">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="border-t hover:bg-gray-50">
+                <td class="px-6 py-4"><img src="https://mediamodifier.com/blog/wp-content/uploads/2020/02/01-paperback-book-cover-mockup-standing.jpg" alt="Book" class="w-16 h-24 object-cover rounded"/></td>
+                <td class="px-6 py-4 font-medium">1984</td>
+                <td class="px-6 py-4">George Orwell</td>
+                <td class="px-6 py-4">Dec 10, 2025</td>
+                <td class="px-6 py-4 text-red-600 font-medium">Dec 25, 2025 (Overdue)</td>
+                <td class="px-6 py-4 space-x-2">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="alert('Renewed!')">Renew</button>
+                <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700" onclick="alert('Returned!')">Return</button>
+                </td>
+            </tr>
+            <!-- Add more rows -->
+            </tbody>
+        </table>
+    </div>
+</main>
+
+{% endblock content %}
