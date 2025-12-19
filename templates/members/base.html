@@ -21,12 +21,12 @@
         <h1 class="text-2xl font-bold text-blue-600">LibraFlow</h1>
       </div>
       <nav class="space-y-2">
-        <a href="member-dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700">Dashboard</a>
-        <a href="my-books.html" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700">My Borrowed Books</a>
-        <a href="reserve-book.html" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700">Reserve Book</a>
-        <a href="member-profile.html" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700">Profile</a>
-        <a href="fines.html" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700">Fines & Payments</a>
-        <a href="catalog.html" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700">Book Catalog</a>
+        <a href="/member/dash/" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700 {% if request.path == '/member/dash/' %}font-bold text-orange-600{% endif %}">Dashboard</a>
+        <a href="/member/my-books/" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700 {% if request.path == '/member/my-books/' %}font-bold text-orange-600{% endif %}">My Borrowed Books</a>
+        <a href="/member/reserve-book/" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700 {% if request.path == '/member/reserve-book/' %}font-bold text-orange-600{% endif %}">Reserve Book</a>
+        <a href="/member/profile/" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700 {% if request.path == '/member/profile/' %}font-bold text-orange-600{% endif %}">Profile</a>
+        <a href="/member/fines/" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700 {% if request.path == '/member/fines/' %}font-bold text-orange-600{% endif %}">Fines & Payments</a>
+        <a href="/member/catalog/" class="block px-4 py-3 rounded-lg hover:bg-blue-50 text-gray-700 {% if request.path == '/member/catalog/' %}font-bold text-orange-600{% endif %}">Book Catalog</a>
       </nav>
     </div>
     <div class="absolute bottom-0 w-full p-6">

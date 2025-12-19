@@ -1,0 +1,36 @@
+{% extends "members/base.html" %}
+
+{% block title %}Fines & Payments{% endblock title %}
+
+{% block content %}
+
+<main class="p-6 md:p-10">
+    <h3 class="text-3xl font-bold mb-8">Fines & Payment History</h3>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6 border-b">
+            <p class="text-xl">Total Outstanding Fines: <span class="text-red-600 font-bold">$15.00</span></p>
+        </div>
+        <table class="w-full">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="px-6 py-4 text-left">Date</th>
+                    <th class="px-6 py-4 text-left">Book Title</th>
+                    <th class="px-6 py-4 text-left">Fine Amount</th>
+                    <th class="px-6 py-4 text-left">Status</th>
+                    <th class="px-6 py-4 text-left">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t hover:bg-gray-50">
+                    <td class="px-6 py-4">Dec 19, 2025</td>
+                    <td class="px-6 py-4">1984</td>
+                    <td class="px-6 py-4">$10.00</td>
+                    <td class="px-6 py-4"><span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Unpaid</span></td>
+                    <td class="px-6 py-4"><button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700" onclick="alert('Payment successful!')">Pay Now</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+{% endblock content %}
