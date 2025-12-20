@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
   <title>Login - LibraFlow</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/toast.css' %}">
 </head>
 <body class="bg-gradient-to-br from-blue-600 to-blue-800 min-h-screen flex items-center justify-center">
   <div class="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md">
@@ -15,24 +17,26 @@
       </svg>
       <h2 class="text-3xl font-bold text-blue-600">Login to LibraFlow</h2>
     </div>
-    <form>
-      <div class="mb-6">
+    <form id="login" method="POST">
+      {% csrf_token %}
+      <!--<div class="mb-6">
         <label class="block text-gray-700 font-medium mb-2">Role</label>
         <select class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
           <option>Member</option>
           <option>Librarian</option>
           <option>Admin</option>
         </select>
-      </div>
+      </div>-->
       <div class="mb-6">
-        <label class="block text-gray-700 font-medium mb-2">Email / Username</label>
-        <input type="text" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"/>
+        <label class="block text-gray-700 font-medium mb-2">Email</label>
+        <input type="email" name="email" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"/>
       </div>
       <div class="mb-8">
         <label class="block text-gray-700 font-medium mb-2">Password</label>
-        <input type="password" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"/>
+        <input type="password" name="password" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"/>
       </div>
-      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">Login</button>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition" id="btn-1">Login</button>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition" id="btn-2" disabled style="opacity: .4; font-style: italic; display:none;">Loginin...</button>
       <p class="mt-6 text-center text-gray-600">
         <a href="/forget/" class="text-blue-600 hover:underline">Forgot Password?</a>
       </p>
@@ -41,5 +45,59 @@
       </p>
     </form>
   </div>
+
+  <div id="toast-container"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  <script src="{% static 'js/toast.js' %}"></script>
+
+  <script>
+        $(document).ready(function() {
+            
+            var csrftoken = $("input[name=csrfmiddlewaretoken]").val();
+
+            $(document).on("submit", "#login", function(e) {
+                e.preventDefault();
+
+                var btn_1 = $("#btn-1");
+                var btn_2 = $("#btn-2");
+
+                var formData = new FormData(this);
+
+                btn_1.hide();
+                btn_2.show();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/login/",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: { "X-CSRFToken": csrftoken },
+                    success: function(response) {
+                        btn_1.show();
+                        btn_2.hide();
+
+                        if (response.success) {
+                            showToast(response.message, "success");
+                            setTimeout(() => {
+                                window.location.href = response.url;
+                            }, 1500);
+
+                        } else {
+                            showToast(response.error || "Login failed.", "error");
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        btn_1.show();
+                        btn_2.hide();
+                        showToast("Something went wrong! Please try again.", "error");
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
