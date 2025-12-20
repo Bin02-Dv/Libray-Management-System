@@ -20,5 +20,7 @@ urlpatterns = [
     path("dash/", views.admin_dash, name="dash"),
     path("manage-books/", views.admin_manage_book, name="manage-book"),
     path("manage-members/", views.admin_manage_members, name="manage-members"),
-    path("circulation/", views.admin_circulation, name="circulation")
+    path("circulation/", views.admin_circulation, name="circulation"),
+    path("fines/", views.admin_fines, name="fines"),
+    path("reports/", views.admin_report, name="reports")
 ]

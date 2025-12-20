@@ -1,0 +1,98 @@
+{% extends "Theadmin/base.html" %}
+
+{% block title %}Report{% endblock title %}
+
+{% block content %}
+
+<h3 class="text-3xl font-bold mb-8">Reports</h3>
+<div class="grid md:grid-cols-3 gap-6">
+    <!-- Overdue Report - Bar Chart -->
+    <div class="bg-white p-6 rounded-xl shadow-lg">
+        <h4 class="text-xl font-bold mb-4">Overdue Report</h4>
+        <canvas id="overdueChart" height="200"></canvas>
+    </div>
+
+    <!-- Most Borrowed Books - Pie Chart -->
+    <div class="bg-white p-6 rounded-xl shadow-lg">
+        <h4 class="text-xl font-bold mb-4">Most Borrowed Books</h4>
+        <canvas id="borrowedChart" height="200"></canvas>
+    </div>
+
+    <!-- Inventory Summary - Line Chart -->
+    <div class="bg-white p-6 rounded-xl shadow-lg">
+        <h4 class="text-xl font-bold mb-4">Inventory Summary</h4>
+        <canvas id="inventoryChart" height="200"></canvas>
+    </div>
+</div>
+
+<!-- Load Chart.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+// Overdue Bar Chart
+new Chart(document.getElementById('overdueChart'), {
+  type: 'bar',
+  data: {
+    labels: ['John Doe', 'Jane Smith', 'Alex Lee', 'Sara Brown', 'Mike Chen'],
+    datasets: [{
+      label: 'Overdue Books',
+      data: [5, 3, 4, 2, 6],
+      backgroundColor: 'rgba(239, 68, 68, 0.7)', // Red tones
+      borderColor: 'rgb(239, 68, 68)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top' } },
+    scales: { y: { beginAtZero: true } }
+  }
+});
+
+// Most Borrowed Pie Chart
+new Chart(document.getElementById('borrowedChart'), {
+  type: 'pie',
+  data: {
+    labels: ['1984', 'To Kill a Mockingbird', 'Pride and Prejudice', 'The Great Gatsby', 'Harry Potter'],
+    datasets: [{
+      data: [45, 38, 32, 28, 25],
+      backgroundColor: [
+        '#3B82F6', // Blue
+        '#10B981', // Green
+        '#F59E0B', // Yellow
+        '#EF4444', // Red
+        '#8B5CF6'  // Purple
+      ],
+      borderWidth: 2,
+      borderColor: '#fff'
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'right' } }
+  }
+});
+
+// Inventory Line Chart
+new Chart(document.getElementById('inventoryChart'), {
+  type: 'line',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [{
+      label: 'Total Books in Stock',
+      data: [1200, 1180, 1220, 1250, 1230, 1280, 1300, 1270, 1290, 1320, 1310, 1245],
+      borderColor: '#2563EB',
+      backgroundColor: 'rgba(37, 99, 235, 0.1)',
+      tension: 0.4,
+      fill: true
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top' } },
+    scales: { y: { beginAtZero: false } }
+  }
+});
+</script>
+
+{% endblock content %}
