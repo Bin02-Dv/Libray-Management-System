@@ -52,3 +52,9 @@ def admin_manage_members(request):
 
 def admin_circulation(request):
     return render(request, "Theadmin/circulation.html")
+
+def admin_fines(request):
+    return render(request, "Theadmin/fines.html")
+
+def admin_report(request):
+    return render(request, "Theadmin/reports.html")
