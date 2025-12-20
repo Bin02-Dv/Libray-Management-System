@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "bash bash.sh",
+  "buildCommand": "python manage.py collectstatic --noinput",
   "builds": [
     {
       "src": "LYMS/wsgi.py",
