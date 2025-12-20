@@ -58,3 +58,12 @@ def admin_fines(request):
 
 def admin_report(request):
     return render(request, "Theadmin/reports.html")
+
+def admin_settings(request):
+    return render(request, "Theadmin/settings.html")
+
+def page_404(request, exception):
+    return render(request, "404.html")
+
+def page_500(request):
+    return render(request, "500.html")
