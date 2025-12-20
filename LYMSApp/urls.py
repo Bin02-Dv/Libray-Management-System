@@ -22,5 +22,8 @@ urlpatterns = [
     path("manage-members/", views.admin_manage_members, name="manage-members"),
     path("circulation/", views.admin_circulation, name="circulation"),
     path("fines/", views.admin_fines, name="fines"),
-    path("reports/", views.admin_report, name="reports")
+    path("reports/", views.admin_report, name="reports"),
+    path("settings/", views.admin_settings, name="settings"),
+    path("404/", views.page_404, name="404"),
+    path("500/", views.page_500, name="500")
 ]
