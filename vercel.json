@@ -1,19 +1,12 @@
 {
   "version": 2,
+  "buildCommand": "bash bash.sh",
   "builds": [
     {
       "src": "LYMS/wsgi.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.13" 
-      }
-    },
-    {
-      "src": "build.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles"
+        "runtime": "python3.13"
       }
     }
   ],
