@@ -1,23 +1,27 @@
 {
   "version": 2,
-  "buildCommand": "python manage.py collectstatic --noinput",
   "builds": [
-    {
+      {
       "src": "LYMS/wsgi.py",
       "use": "@vercel/python",
       "config": {
+        "maxLambdaSize": "15mb",
         "runtime": "python3.13"
+      }
+    },
+    {
+      "src": "build.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles"
       }
     }
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "LYMS/wsgi.py"
     }
-  ]
+  ],
+  "outputDirectory": "staticfiles" 
 }
