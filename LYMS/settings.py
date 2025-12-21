@@ -75,6 +75,49 @@ TEMPLATES = [
 WSGI_APPLICATION = 'LYMS.wsgi.application'
 
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False, # Retain Django's default loggers
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO', # Minimum log level to write to the file
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'server.log'), # Path to your log file
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'DEBUG', # Log all messages to the console during development/production viewing
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'], # Use both file and console handlers
+            'level': 'INFO', # Controls the base level for all Django-related logs
+            'propagate': True,
+        },
+        # You can add loggers for your own apps here
+        'LYMSApp': {
+            'handlers': ['file'],
+            'level': 'DEBUG', # Log debug messages for your app to the file
+            'propagate': True,
+        },
+    },
+}
+
+
+
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
