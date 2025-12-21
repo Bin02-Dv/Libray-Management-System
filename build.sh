@@ -3,7 +3,7 @@
 set -o errexit
 
 # Install requirements
-python3.13 -m pip install -r requirements.txt
+pip install -r requirements.txt
 
 # Collect static files
 python3.13 manage.py collectstatic --noinput
