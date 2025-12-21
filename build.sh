@@ -6,5 +6,5 @@ set -o errexit
 pip install -r requirements.txt
 
 # Collect static files
-python3.13 manage.py collectstatic --noinput
+python3.12 manage.py collectstatic --noinput
 # Be sure to use the correct python version (e.g. python3.9, python3.10)
