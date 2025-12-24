@@ -123,10 +123,8 @@ def admin_report(request):
 def admin_settings(request):
     return render(request, "Theadmin/settings.html")
 
-@login_required(login_url='/login/')
 def page_404(request, exception):
     return render(request, "404.html")
 
-@login_required(login_url='/login/')
 def page_500(request):
     return render(request, "500.html")
