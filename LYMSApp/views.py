@@ -36,24 +36,24 @@ def login(request):
                     "message": "Login Successfully...",
                     "success": True,
                     "url": url
-                })
+                }, status=200)
             else:
                 return JsonResponse({
                     "error": "Sorry your password is incorrect!!",
                     "success": False,
-                })
+                }, status=200)
                 
         elif not email or not password:
             return JsonResponse({
                 "error": "Your email and passeord are required!!",
                 "success": False
-            })
+            }, status=200)
         
         else:
             return JsonResponse({
                 "error": f"Sorry we couldn't find any account with this email - {email}",
                 "success": False,
-            })
+            }, status=400)
     return render(request, "login.html")
 
 def signup(request):
