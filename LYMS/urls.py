@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from LYMSApp.views import page_404
+from LYMSApp.views import page_404, page_500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,3 +24,4 @@ urlpatterns = [
 ]
 
 handler404 = page_404
+handler500 = page_500
