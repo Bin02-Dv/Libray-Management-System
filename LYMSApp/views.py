@@ -173,8 +173,42 @@ def update_book_ajax(request):
 def admin_manage_members(request):
     current_user = models.Profile.objects.filter(user=request.user).first()
     
+    members = models.Profile.objects.filter(user__role="member")
+    
+    
+    if request.method == 'POST':
+        full_name = request.POST.get("full_name")
+        email = request.POST.get("email")
+        phone_number = request.POST.get("phone_number")
+        password = request.POST.get("password")
+        confirm_password = request.POST.get("confirm_password")
+        home_address = request.POST.get("home_address")
+        
+        if models.AuthModel.objects.filter(email=email).exists():
+            return JsonResponse({
+                "error": f"Sorry this email {email}, already exist!!",
+                "success": False
+            })
+        elif confirm_password != password:
+            return JsonResponse({
+                "error": "Sorry you password and confirm password missed match!!",
+                "success": False
+            })
+        
+        else:
+            new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member", username=email)
+            
+            if full_name or home_address:
+                models.Profile.objects.create(user=new_member, full_name=full_name, home_address=home_address)
+            
+            return JsonResponse({
+                "message": "New Member added successfully..",
+                "success": True
+            })
+    
     context = {
-        "current_user": current_user
+        "current_user": current_user,
+        "members": members
     }
     return render(request, "Theadmin/manage-members.html", context)
 
