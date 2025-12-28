@@ -17,6 +17,7 @@
                     <th class="px-6 py-4 text-left">Cover</th>
                     <th class="px-6 py-4 text-left">Title</th>
                     <th class="px-6 py-4 text-left">Author</th>
+                    <th class="px-6 py-4 text-left">Publisher</th>
                     <th class="px-6 py-4 text-left">ISBN</th>
                     <th class="px-6 py-4 text-left">Copies</th>
                     <th class="px-6 py-4 text-left">Actions</th>
@@ -25,15 +26,21 @@
             <tbody>
                 {% if books %}
                 {% for book in books %}
-                <tr class="border-t hover:bg-gray-50">
-                    <td class="px-6 py-4"><img src="{{book.cover_imge.url}}" alt="Cover" class="w-12 h-16 object-cover rounded"/></td>
-                    <td class="px-6 py-4 font-medium">{{book.title}}</td>
-                    <td class="px-6 py-4">{{book.author}}</td>
-                    <td class="px-6 py-4">{{book.ISBN}}</td>
-                    <td class="px-6 py-4">{{book.copies}}</td>
+                <tr id="book-row-{{ book.id }}" class="border-t hover:bg-gray-50">
+                    <td class="px-6 py-4">
+                        <img src="{{ book.cover_imge.url }}" class="w-12 h-16 object-cover rounded"/>
+                    </td>
+                    <td class="px-6 py-4 font-medium book-title">{{ book.title }}</td>
+                    <td class="px-6 py-4 book-author">{{ book.author }}</td>
+                    <td class="px-6 py-4 book-publisher">{{ book.pbulisher }}</td>
+                    <td class="px-6 py-4 book-isbn">{{ book.ISBN }}</td>
+                    <td class="px-6 py-4 book-copies">{{ book.copies }}</td>
                     <td class="px-6 py-4 space-x-3">
-                        <button onclick="document.getElementById('edit-modal').classList.remove('hidden')" class="text-blue-600 hover:underline">Edit</button>
-                        <button onclick="if(confirm('Delete this book?')) alert('Book deleted!')" class="text-red-600 hover:underline">Delete</button>
+                        <button
+                        onclick="openEditModal('{{book.id}}','{{book.title}}','{{book.author}}','{{book.ISBN}}',
+                                                '{{book.pbulisher}}','{{book.category}}','{{book.copies}}',
+                                                '{{book.cover_imge.url}}')"
+                        class="text-blue-600 hover:underline">Edit</button>
                     </td>
                 </tr>
                 {% endfor %}
@@ -78,11 +85,166 @@
     </div>
 </div>
 
-<!-- Edit Modal (same as Add, just pre-filled) -->
+<!-- Edit Book Modal -->
 <div id="edit-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-<!-- Copy the same form as above, but change title to "Edit Book" and button to "Save Changes" -->
-<!-- For brevity, it's identical to add-modal but you can pre-fill values -->
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold">Edit Book</h3>
+            <button type="button" onclick="document.getElementById('edit-modal').classList.add('hidden')"
+                    class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        </div>
+
+        <form id="edit-book-form" method="POST" enctype="multipart/form-data" data-url="{% url 'update_book_ajax' %}">
+            {% csrf_token %}
+
+            <!-- Hidden field to identify which book we're editing -->
+            <input type="hidden" name="book_id" id="edit_book_id">
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Title</label>
+                    <input type="text" name="title" id="edit_title" required
+                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none"/>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Author</label>
+                    <input type="text" name="author" id="edit_author" required
+                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none"/>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">ISBN</label>
+                    <input type="text" name="ISBN" id="edit_ISBN" required
+                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none"/>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Publisher</label>
+                    <input type="text" name="publisher" id="edit_publisher" required
+                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none"/>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Category</label>
+                    <select name="category" id="edit_category" required
+                            class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                        <option value="Fiction">Fiction</option>
+                        <option value="Science">Science</option>
+                        <option value="History">History</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <!-- Add more as needed -->
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Copies Available</label>
+                    <input type="number" name="copies" id="edit_copies" min="0" required
+                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none"/>
+                </div>
+            </div>
+
+            <!-- Current Cover + Upload New -->
+            <div class="mt-6">
+                <label class="block text-gray-700 font-medium mb-2">Current Cover</label>
+                <div class="flex items-center space-x-6">
+                    <img id="edit_current_cover" src="" alt="Current Cover" class="w-32 h-48 object-cover rounded shadow"/>
+                    <div>
+                        <label class="block mb-2 text-gray-700">Upload New Cover (optional)</label>
+                        <input type="file" name="cover_image" id="edit_cover_image" accept="image/*"
+                               class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-10 flex justify-end space-x-4">
+                <button type="button" onclick="document.getElementById('edit-modal').classList.add('hidden')"
+                        class="px-8 py-3 border rounded-lg hover:bg-gray-100 transition">Cancel</button>
+
+                <button type="submit" id="edit-submit-btn" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    Save Changes
+                </button>
+
+                <button type="button" id="edit-loading-btn" class="px-8 py-3 bg-blue-600 text-white rounded-lg opacity-50 cursor-not-allowed hidden">
+                    Saving...
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
+
+<script>
+    // Function to open edit modal and fill data
+    function openEditModal(bookId, title, author, isbn, publisher, category, copies, coverUrl) {
+        document.getElementById('edit_book_id').value = bookId;
+        document.getElementById('edit_title').value = title;
+        document.getElementById('edit_author').value = author;
+        document.getElementById('edit_ISBN').value = isbn;
+        document.getElementById('edit_publisher').value = publisher;
+        document.getElementById('edit_category').value = category;
+        document.getElementById('edit_copies').value = copies;
+        document.getElementById('edit_current_cover').src = coverUrl || '/media/default-book-cover.jpg';
+
+        document.getElementById('edit-modal').classList.remove('hidden');
+    }
+</script>
+
+<script>
+const form = document.getElementById('edit-book-form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const url = form.dataset.url;
+    const formData = new FormData(form);
+
+    document.getElementById('edit-submit-btn').classList.add('hidden');
+    document.getElementById('edit-loading-btn').classList.remove('hidden');
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            // Update row in table
+            const row = document.querySelector(`#book-row-${data.id}`);
+            if (row) {
+                row.querySelector('.book-title').innerText = data.title;
+                row.querySelector('.book-author').innerText = data.author;
+                row.querySelector('.book-isbn').innerText = data.ISBN;
+                row.querySelector('.book-publisher').innerText = data.publisher;
+                row.querySelector('.book-copies').innerText = data.copies;
+                if (data.cover_url) {
+                    row.querySelector('img').src = data.cover_url;
+                }
+            }
+
+            showToast(data.title+" Updated successfully...", "success");
+
+            // Close modal
+            document.getElementById('edit-modal').classList.add('hidden');
+            form.reset();
+        } else {
+            showToast("Updating book failed.", "error");
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        showToast("Something went wrong! Please try again.", "error");
+    })
+    .finally(() => {
+        document.getElementById('edit-loading-btn').classList.add('hidden');
+        document.getElementById('edit-submit-btn').classList.remove('hidden');
+    });
+});
+</script>
+
 
 <script>
         $(document).ready(function() {
