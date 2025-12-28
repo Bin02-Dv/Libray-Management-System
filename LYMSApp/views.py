@@ -112,11 +112,30 @@ def admin_dash(request):
 def admin_manage_book(request):
     current_user = models.Profile.objects.filter(user=request.user).first()
     
+    books = models.Books.objects.all().order_by("-id")
+    
     if request.method == 'POST':
-        pass
+        title = request.POST.get("title")
+        author = request.POST.get("author")
+        ISBN = request.POST.get("ISBN")
+        publisher = request.POST.get("publisher")
+        category = request.POST.get("category")
+        copies = request.POST.get("copies")
+        cover_image = request.FILES.get("cover_image")
+        
+        models.Books.objects.create(
+            title=title, author=author, ISBN=ISBN, pbulisher=publisher, category=category, copies=copies,
+            cover_imge=cover_image
+        )
+        
+        return JsonResponse({
+            "message": "Book Added successfully..",
+            "success": True
+        })
     
     context = {
-        "current_user": current_user
+        "current_user": current_user,
+        "books": books
     }
     return render(request, "Theadmin/manage-book.html", context)
 
