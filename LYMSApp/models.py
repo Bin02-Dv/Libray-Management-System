@@ -8,19 +8,23 @@ class AuthModel(AbstractUser):
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20)
     role = models.CharField(max_length=20)
-    home_address = models.TextField()
     
     username = models.CharField(unique=True)
     
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-    
 
+class Profile(models.Model):
+    user = models.ForeignKey(AuthModel, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=20)
+    home_address = models.TextField()
+    
 
 class Books(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=20)
     ISBN = models.CharField(max_length=20)
+    copies = models.IntegerField()
     pbulisher = models.CharField(max_length=20)
     category = models.CharField(max_length=20)
-    image = CloudinaryField('LBRY/books', blank=True, null=True)
+    cover_imge = CloudinaryField('LBRY/books', blank=True, null=True)

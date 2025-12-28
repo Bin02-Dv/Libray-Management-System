@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
   <title>{% block title %}{% endblock title %} - LibraFlow</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/toast.css' %}">
   <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-gray-50">
@@ -41,12 +43,18 @@
         <button id="mobile-toggle" class="md:hidden text-blue-600">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
-        <h2 class="text-2xl font-bold text-gray-800">Admin: Welcome, Librarian Alex</h2>
+        <h2 class="text-2xl font-bold text-gray-800">{{current_user.user.role|capfirst}}: Welcome, Librarian {{current_user.full_name}}</h2>
         <div class="flex items-center space-x-4">
-          <img src="https://via.placeholder.com/48" alt="Profile" class="w-12 h-12 rounded-full border-2 border-blue-600"/>
-          <span class="hidden md:block font-medium">Librarian Alex</span>
+          {% comment %} <img src="https://via.placeholder.com/48" alt="Profile" class="w-12 h-12 rounded-full border-2 border-blue-600"/> {% endcomment %}
+          <span class="hidden md:block font-medium">Librarian {{current_user.full_name}}</span>
         </div>
       </header>
+
+      <div id="toast-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/toast.js' %}"></script>
 
       <main class="p-6 md:p-10">
         {% block content %}{% endblock content %}
