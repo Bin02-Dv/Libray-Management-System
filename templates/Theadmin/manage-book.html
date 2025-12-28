@@ -43,22 +43,28 @@
 <div id="add-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-2xl">
         <h3 class="text-2xl font-bold mb-6">Add New Book</h3>
-        <form>
+        <form id="add-book" method="POST">
+            {% csrf_token %}
             <div class="grid md:grid-cols-2 gap-6">
-                <input type="text" placeholder="Title" class="px-4 py-3 border rounded-lg"/>
-                <input type="text" placeholder="Author" class="px-4 py-3 border rounded-lg"/>
-                <input type="text" placeholder="ISBN" class="px-4 py-3 border rounded-lg"/>
-                <input type="text" placeholder="Publisher" class="px-4 py-3 border rounded-lg"/>
-                <select class="px-4 py-3 border rounded-lg"><option>Category</option><option>Fiction</option><option>Science</option></select>
-                <input type="number" placeholder="Copies Available" class="px-4 py-3 border rounded-lg"/>
+                <input type="text" name="title" placeholder="Title" class="px-4 py-3 border rounded-lg" required/>
+                <input type="text" name="author" placeholder="Author" class="px-4 py-3 border rounded-lg" required/>
+                <input type="text" name="ISBN" placeholder="ISBN" class="px-4 py-3 border rounded-lg" required/>
+                <input type="text" name="publisher" placeholder="Publisher" class="px-4 py-3 border rounded-lg" required/>
+                <select name="category" class="px-4 py-3 border rounded-lg" required>
+                    <option>Category</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value=Science>Science</option>
+                </select>
+                <input type="number" name="copies" placeholder="Copies Available" class="px-4 py-3 border rounded-lg"/>
             </div>
             <div class="mt-6">
                 <label class="block mb-2">Cover Image</label>
-                <input type="file" accept="image/*" class="w-full"/>
+                <input type="file" name="cover_image" accept="image/*" class="w-full" required/>
             </div>
             <div class="mt-8 flex justify-end space-x-4">
                 <button type="button" onclick="document.getElementById('add-modal').classList.add('hidden')" class="px-6 py-3 border rounded-lg hover:bg-gray-100">Cancel</button>
-                <button type="submit" onclick="alert('Book added successfully!'); document.getElementById('add-modal').classList.add('hidden')" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Add Book</button>
+                <button type="submit" id="btn-1" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Add Book</button>
+                <button type="submit" id="btn-2" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700" disabled style="opacity: .4; font-style: italic; display:none;">Adding Book...</button>
             </div>
         </form>
     </div>
@@ -69,5 +75,53 @@
 <!-- Copy the same form as above, but change title to "Edit Book" and button to "Save Changes" -->
 <!-- For brevity, it's identical to add-modal but you can pre-fill values -->
 </div>
+
+<script>
+        $(document).ready(function() {
+            
+            var csrftoken = $("input[name=csrfmiddlewaretoken]").val();
+
+            $(document).on("submit", "#add-book", function(e) {
+                e.preventDefault();
+
+                var btn_1 = $("#btn-1");
+                var btn_2 = $("#btn-2");
+
+                var formData = new FormData(this);
+
+                btn_1.hide();
+                btn_2.show();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/manage-books/",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: { "X-CSRFToken": csrftoken },
+                    success: function(response) {
+                        btn_1.show();
+                        btn_2.hide();
+
+                        if (response.success) {
+                            showToast(response.message, "success");
+                            setTimeout(() => {
+                                window.location.href = response.url;
+                            }, 1500);
+
+                        } else {
+                            showToast(response.error || "Adding book failed.", "error");
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        btn_1.show();
+                        btn_2.hide();
+                        showToast("Something went wrong! Please try again.", "error");
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
 
 {% endblock content %}

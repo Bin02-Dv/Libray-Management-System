@@ -101,30 +101,68 @@ def member_catalog(request):
 
 @login_required(login_url='/login/')
 def admin_dash(request):
-    return render(request, "Theadmin/dash.html")
+    current_user = models.Profile.objects.filter(user=request.user).first()
+    
+    context = {
+        "current_user": current_user
+    }
+    return render(request, "Theadmin/dash.html", context)
 
 @login_required(login_url='/login/')
 def admin_manage_book(request):
-    return render(request, "Theadmin/manage-book.html")
+    current_user = models.Profile.objects.filter(user=request.user).first()
+    
+    if request.method == 'POST':
+        pass
+    
+    context = {
+        "current_user": current_user
+    }
+    return render(request, "Theadmin/manage-book.html", context)
 
 @login_required(login_url='/login/')
 def admin_manage_members(request):
+    current_user = models.Profile.objects.filter(user=request.user).first()
+    
+    context = {
+        "current_user": current_user
+    }
     return render(request, "Theadmin/manage-members.html")
 
 @login_required(login_url='/login/')
 def admin_circulation(request):
+    current_user = models.Profile.objects.filter(user=request.user).first()
+    
+    context = {
+        "current_user": current_user
+    }
     return render(request, "Theadmin/circulation.html")
 
 @login_required(login_url='/login/')
 def admin_fines(request):
+    current_user = models.Profile.objects.filter(user=request.user).first()
+    
+    context = {
+        "current_user": current_user
+    }
     return render(request, "Theadmin/fines.html")
 
 @login_required(login_url='/login/')
 def admin_report(request):
+    current_user = models.Profile.objects.filter(user=request.user).first()
+    
+    context = {
+        "current_user": current_user
+    }
     return render(request, "Theadmin/reports.html")
 
 @login_required(login_url='/login/')
 def admin_settings(request):
+    current_user = models.Profile.objects.filter(user=request.user).first()
+    
+    context = {
+        "current_user": current_user
+    }
     return render(request, "Theadmin/settings.html")
 
 def page_404(request, exception):
