@@ -26,5 +26,7 @@ urlpatterns = [
     path("reports/", views.admin_report, name="reports"),
     path("settings/", views.admin_settings, name="settings"),
     path("404/", views.page_404, name="404"),
-    path("500/", views.page_500, name="500")
+    path("500/", views.page_500, name="500"),
+    
+    path('books/update/', views.update_book_ajax, name='update_book_ajax'),
 ]

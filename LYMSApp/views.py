@@ -3,6 +3,8 @@ from . import models
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from django.views.decorators.http import require_POST
 
 import logging
 
@@ -139,6 +141,34 @@ def admin_manage_book(request):
     }
     return render(request, "Theadmin/manage-book.html", context)
 
+@require_POST
+def update_book_ajax(request):
+    book_id = request.POST.get('book_id')
+    book = get_object_or_404(models.Books, id=book_id)
+
+    book.title = request.POST.get('title')
+    book.author = request.POST.get('author')
+    book.ISBN = request.POST.get('ISBN')
+    book.pbulisher = request.POST.get('publisher')
+    book.category = request.POST.get('category')
+    book.copies = request.POST.get('copies')
+
+    if 'cover_image' in request.FILES:
+        book.cover_imge = request.FILES['cover_image']
+
+    book.save()
+
+    return JsonResponse({
+        'success': True,
+        'id': book.id,
+        'title': book.title,
+        'author': book.author,
+        'ISBN': book.ISBN,
+        'publisher': book.pbulisher,
+        'copies': book.copies,
+        'cover_url': book.cover_imge.url if book.cover_imge else ''
+    })
+
 @login_required(login_url='/login/')
 def admin_manage_members(request):
     current_user = models.Profile.objects.filter(user=request.user).first()
@@ -146,7 +176,7 @@ def admin_manage_members(request):
     context = {
         "current_user": current_user
     }
-    return render(request, "Theadmin/manage-members.html")
+    return render(request, "Theadmin/manage-members.html", context)
 
 @login_required(login_url='/login/')
 def admin_circulation(request):
