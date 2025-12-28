@@ -4,6 +4,10 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 
+import logging
+
+logger = logging.getLogger("django.request")
+
 # Create your views here.
 
 def index(request):
@@ -124,7 +128,9 @@ def admin_settings(request):
     return render(request, "Theadmin/settings.html")
 
 def page_404(request, exception):
-    return render(request, "404.html")
+    logger.warning("Page not found: %s", request.path)
+    return render(request, "404.html", status=404)
 
 def page_500(request):
-    return render(request, "500.html")
+    logger.exception("Internal Server Error (500)")
+    return render(request, "500.html", status=500)
