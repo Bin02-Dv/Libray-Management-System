@@ -6,6 +6,10 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 
+from django.db import transaction
+from django.utils import timezone
+from datetime import timedelta
+
 import logging
 
 logger = logging.getLogger("django.request")
@@ -156,12 +160,11 @@ def update_book_ajax(request):
     book.title = request.POST.get('title')
     book.author = request.POST.get('author')
     book.ISBN = request.POST.get('ISBN')
-    book.pbulisher = request.POST.get('publisher')
+    book.publisher = request.POST.get('publisher')
     book.category = request.POST.get('category')
-    book.copies = request.POST.get('copies')
 
     if 'cover_image' in request.FILES:
-        book.cover_imge = request.FILES['cover_image']
+        book.cover_image = request.FILES['cover_image']
 
     book.save()
 
@@ -171,9 +174,8 @@ def update_book_ajax(request):
         'title': book.title,
         'author': book.author,
         'ISBN': book.ISBN,
-        'publisher': book.pbulisher,
-        'copies': book.copies,
-        'cover_url': book.cover_imge.url if book.cover_imge else ''
+        'publisher': book.publisher,
+        'cover_url': book.cover_image.url if book.cover_image else ''
     })
 
 @login_required(login_url='/login/')
@@ -223,10 +225,129 @@ def admin_manage_members(request):
 def admin_circulation(request):
     current_user = models.Profile.objects.filter(user=request.user).first()
     
+    issues = models.Issue.objects.select_related(
+        "member__user", "copy__book"
+    ).order_by("-issued_at")
+    
     context = {
-        "current_user": current_user
+        "current_user": current_user,
+        "issues": issues
     }
     return render(request, "Theadmin/circulation.html", context)
+
+@transaction.atomic
+def issue_book(request):
+    if request.method != "POST":
+        return JsonResponse({"error": "Invalid request"}, status=400)
+
+    member_id = request.POST.get("member_id")
+    identifier = request.POST.get("identifier")  # ISBN or Copy ID
+
+    try:
+        member = models.Profile.objects.get(id=member_id)
+    except models.Profile.DoesNotExist:
+        return JsonResponse({"error": "Invalid member"}, status=404)
+
+    # Find copy
+    copy = (
+        models.BookCopy.objects
+        .select_for_update()
+        .filter(
+            is_available=True
+        )
+        .filter(
+            copy_id=identifier
+        )
+        .first()
+    )
+
+    if not copy:
+        copy = (
+            models.BookCopy.objects
+            .select_for_update()
+            .filter(
+                is_available=True,
+                book__ISBN=identifier
+            )
+            .first()
+        )
+
+    if not copy:
+        return JsonResponse({"error": "No available copy"}, status=400)
+
+    due_date = timezone.now().date() + timedelta(days=14)
+
+    models.Issue.objects.create(
+        member=member,
+        copy=copy,
+        due_at=due_date
+    )
+
+    copy.is_available = False
+    copy.save()
+
+    return JsonResponse({
+        "message": "Book issued successfully",
+        "due_date": due_date
+    })
+
+
+@transaction.atomic
+def return_book(request):
+    if request.method != "POST":
+        return JsonResponse({"error": "Invalid request"}, status=400)
+
+    copy_id = request.POST.get("copy_id")
+
+    try:
+        issue = (
+            models.Issue.objects
+            .select_for_update()
+            .get(copy__copy_id=copy_id, returned_at__isnull=True)
+        )
+    except models.Issue.DoesNotExist:
+        return JsonResponse({"error": "Active issue not found"}, status=404)
+
+    issue.returned_at = timezone.now().date()
+    issue.save()
+
+    issue.copy.is_available = True
+    issue.copy.save()
+
+    return JsonResponse({
+        "message": "Book returned",
+        "fine": issue.fine_amount
+    })
+
+@transaction.atomic
+def renew_book(request):
+    if request.method != "POST":
+        return JsonResponse({"error": "Invalid request"}, status=400)
+
+    copy_id = request.POST.get("copy_id")
+
+    try:
+        issue = (
+            models.Issue.objects
+            .select_for_update()
+            .get(copy__copy_id=copy_id, returned_at__isnull=True)
+        )
+    except models.Issue.DoesNotExist:
+        return JsonResponse({"error": "Active issue not found"}, status=404)
+
+    if issue.renewed_times >= issue.MAX_RENEWALS:
+        return JsonResponse({"error": "Renewal limit reached"}, status=400)
+
+    issue.due_at += timedelta(days=14)
+    issue.renewed_times += 1
+    issue.save()
+
+    return JsonResponse({
+        "message": "Book renewed",
+        "new_due": issue.due_at
+    })
+
+
 
 @login_required(login_url='/login/')
 def admin_fines(request):
