@@ -9,24 +9,24 @@
     <!-- Issue Book -->
     <div class="bg-white p-8 rounded-xl shadow-lg">
         <h4 class="text-xl font-bold mb-6">Issue Book</h4>
-        <input type="text" placeholder="Member ID" class="w-full mb-4 px-4 py-3 border rounded-lg"/>
-        <input type="text" placeholder="Book ISBN / Copy ID" class="w-full mb-4 px-4 py-3 border rounded-lg"/>
+        <input id="member_id" type="text" placeholder="Member ID" class="w-full mb-4 px-4 py-3 border rounded-lg" required/>
+        <input id="issue_identifier" type="text" placeholder="Book ISBN / Copy ID" class="w-full mb-4 px-4 py-3 border rounded-lg" required/>
         <p class="mb-4">Due Date: <span class="font-bold">January 2, 2026</span> (14 days)</p>
-        <button onclick="alert('Book issued successfully!')" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">Issue Book</button>
+        <button onclick="issueBook()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">Issue Book</button>
     </div>
 
     <!-- Return Book -->
     <div class="bg-white p-8 rounded-xl shadow-lg">
         <h4 class="text-xl font-bold mb-6">Return Book</h4>
-        <input type="text" placeholder="Book Copy ID" class="w-full mb-4 px-4 py-3 border rounded-lg"/>
-        <button onclick="alert('Book returned! Fine: $2.00')" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">Return Book</button>
+        <input id="return_copy" type="text" placeholder="Book Copy ID" class="w-full mb-4 px-4 py-3 border rounded-lg" required/>
+        <button onclick="returnBook()" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">Return Book</button>
     </div>
 
     <!-- Renew Book -->
     <div class="bg-white p-8 rounded-xl shadow-lg">
         <h4 class="text-xl font-bold mb-6">Renew Book</h4>
-        <input type="text" placeholder="Book Copy ID" class="w-full mb-4 px-4 py-3 border rounded-lg"/>
-        <button onclick="alert('Renewed! New due: January 16, 2026')" class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700">Renew Book</button>
+        <input id="renew_copy" type="text" placeholder="Book Copy ID" class="w-full mb-4 px-4 py-3 border rounded-lg" required/>
+        <button onclick="renewBook()" class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700">Renew Book</button>
     </div>
     </div>
 
@@ -35,9 +35,62 @@
     <table class="w-full">
         <thead class="bg-gray-100"><tr><th class="px-6 py-4 text-left">Member</th><th class="px-6 py-4 text-left">Book</th><th class="px-6 py-4 text-left">Issued</th><th class="px-6 py-4 text-left">Due</th><th class="px-6 py-4 text-left">Status</th></tr></thead>
         <tbody>
-        <tr class="border-t"><td class="px-6 py-4">John Doe</td><td class="px-6 py-4">1984</td><td class="px-6 py-4">Dec 10, 2025</td><td class="px-6 py-4">Dec 24, 2025</td><td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Active</span></td></tr>
+            {% if issues %}
+            {% for issue in issues %}
+            <tr class="border-t">
+                <td class="px-6 py-4">{{ issue.member.full_name }}</td>
+                <td class="px-6 py-4">{{ issue.copy.book.title }}</td>
+                <td class="px-6 py-4">{{ issue.issued_at }}</td>
+                <td class="px-6 py-4">{{ issue.due_at }}</td>
+                <td class="px-6 py-4">
+                    {% if issue.status == "Active" %}
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Active</span>
+                    {% else %}
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Returned</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr class="border-t">
+                <td class="px-6 py-4">No Issued yet!</td>
+            </tr>
+            {% endif %}
         </tbody>
     </table>
 </div>
+
+<script>
+function post(url, data) {
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "X-CSRFToken": "{{ csrf_token }}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: new URLSearchParams(data)
+  }).then(res => res.json());
+}
+
+function issueBook() {
+  post("{% url 'issue_book' %}", {
+    member_id: document.getElementById("member_id").value,
+    identifier: document.getElementById("issue_identifier").value
+  }).then(data => alert(data.message || data.error));
+}
+
+function returnBook() {
+  post("{% url 'return_book' %}", {
+    copy_id: document.getElementById("return_copy").value
+  }).then(data => alert(data.message + " | Fine: ₦" + (data.fine || 0)));
+}
+
+function renewBook() {
+  post("{% url 'renew_book' %}", {
+    copy_id: document.getElementById("renew_copy").value
+  }).then(data => alert(data.message || data.error));
+}
+</script>
+
 
 {% endblock content %}
