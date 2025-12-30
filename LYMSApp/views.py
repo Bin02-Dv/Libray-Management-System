@@ -104,9 +104,16 @@ def member_catalog(request):
 @login_required(login_url='/login/')
 def admin_dash(request):
     current_user = models.Profile.objects.filter(user=request.user).first()
+    total_books = models.Books.objects.all().count()
+    total_books_formatted = f"{total_books:,}"
+    
+    total_members = models.AuthModel.objects.filter(role="member").count()
+    total_members_formatted = f"{total_members:,}"
     
     context = {
-        "current_user": current_user
+        "current_user": current_user,
+        "total_books": total_books_formatted,
+        "total_members": total_members_formatted
     }
     return render(request, "Theadmin/dash.html", context)
 
@@ -219,7 +226,7 @@ def admin_circulation(request):
     context = {
         "current_user": current_user
     }
-    return render(request, "Theadmin/circulation.html")
+    return render(request, "Theadmin/circulation.html", context)
 
 @login_required(login_url='/login/')
 def admin_fines(request):
