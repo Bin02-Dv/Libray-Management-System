@@ -36,8 +36,8 @@
                     <td class="px-6 py-4 space-x-3">
                         <button
                         onclick="openEditModal('{{book.id}}','{{book.title}}','{{book.author}}','{{book.ISBN}}',
-                                                '{{book.publisher}}','{{book.category}}',
-                                                '{{book.cover_image.url}}')"
+                                                '{{book.publisher}}','{{book.category}}','{{book.cover_image.url}}',
+                                                '{{book.available_copies}}')"
                         class="text-blue-600 hover:underline">Edit</button>
                     </td>
                 </tr>
@@ -68,6 +68,7 @@
                     <option value="Fiction">Fiction</option>
                     <option value=Science>Science</option>
                 </select>
+                <input type="number" name="copy_id" placeholder="Copy ID" class="px-4 py-3 border rounded-lg"/>
             </div>
             <div class="mt-6">
                 <label class="block mb-2">Cover Image</label>
@@ -133,6 +134,10 @@
                         <!-- Add more as needed -->
                     </select>
                 </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Copies</label>
+                    <input type="number" id="current_copies" name="copies" placeholder="Copies" class="px-4 py-3 border rounded-lg" disabled/>
+                </div>
             </div>
 
             <!-- Current Cover + Upload New -->
@@ -167,13 +172,14 @@
 
 <script>
     // Function to open edit modal and fill data
-    function openEditModal(bookId, title, author, isbn, publisher, category, coverUrl) {
+    function openEditModal(bookId, title, author, isbn, publisher, category, coverUrl, copies) {
         document.getElementById('edit_book_id').value = bookId;
         document.getElementById('edit_title').value = title;
         document.getElementById('edit_author').value = author;
         document.getElementById('edit_ISBN').value = isbn;
         document.getElementById('edit_publisher').value = publisher;
         document.getElementById('edit_category').value = category;
+        document.getElementById('current_copies').value = copies;
         document.getElementById('edit_current_cover').src = coverUrl || '/media/default-book-cover.jpg';
 
         document.getElementById('edit-modal').classList.remove('hidden');
