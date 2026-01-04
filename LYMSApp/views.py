@@ -67,6 +67,38 @@ def login(request):
     return render(request, "login.html")
 
 def signup(request):
+    if request.method == 'POST':
+        full_name = request.POST.get("full_name")
+        email = request.POST.get("email")
+        phone_number = request.POST.get("phone_number")
+        password = request.POST.get("password")
+        confirm_password = request.POST.get("confirm_password")
+        home_address = request.POST.get("home_address")
+        
+        if models.AuthModel.objects.filter(email=email).exists():
+            return JsonResponse({
+                "error": f"Sorry this email {email}, already exist!!",
+                "success": False
+            })
+        elif confirm_password != password:
+            return JsonResponse({
+                "error": "Sorry you password and confirm password missed match!!",
+                "success": False
+            })
+        
+        else:
+            new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+            new_member.set_password(password)
+            new_member.save()
+            
+            if full_name or home_address:
+                models.Profile.objects.create(user=new_member, full_name=full_name, home_address=home_address)
+            
+            return JsonResponse({
+                "message": "Registration completed successfully..",
+                "success": True
+            })
+        
     return render(request, "signup.html")
 
 def forget(request):
