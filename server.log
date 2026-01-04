@@ -1437,3 +1437,185 @@ INFO 2026-01-04 12:59:37,356 basehttp 12692 23532 "GET /logout/ HTTP/1.1" 302 0
 INFO 2026-01-04 12:59:37,374 basehttp 12692 23532 "GET /login/ HTTP/1.1" 200 4678
 INFO 2026-01-04 12:59:39,543 basehttp 12692 23532 "GET /signup/ HTTP/1.1" 200 3110
 INFO 2026-01-04 13:00:09,336 basehttp 12692 23532 "GET /signup/? HTTP/1.1" 200 3110
+INFO 2026-01-04 13:07:32,418 autoreload 12392 3300 Watching for file changes with StatReloader
+INFO 2026-01-04 13:10:29,749 autoreload 12392 3300 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 13:10:34,005 autoreload 9112 11144 Watching for file changes with StatReloader
+INFO 2026-01-04 13:14:42,474 basehttp 9112 7528 "GET /signup/ HTTP/1.1" 200 5165
+INFO 2026-01-04 13:14:42,799 basehttp 9112 7528 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 13:14:42,820 basehttp 9112 5788 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 13:16:45,343 basehttp 9112 5788 "GET /signup/ HTTP/1.1" 200 5385
+INFO 2026-01-04 13:16:45,524 basehttp 9112 7528 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 13:16:45,524 basehttp 9112 5788 "GET /static/css/toast.css HTTP/1.1" 304 0
+ERROR 2026-01-04 13:17:07,868 views 9112 5788 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:07,920 log 9112 5788 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:07,923 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 500 2055
+ERROR 2026-01-04 13:17:23,173 views 9112 5788 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:23,180 log 9112 5788 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:23,185 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 500 2055
+ERROR 2026-01-04 13:17:23,942 views 9112 5788 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:23,946 log 9112 5788 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:23,953 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 500 2055
+ERROR 2026-01-04 13:17:24,392 views 9112 5788 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,396 log 9112 5788 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,403 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 500 2055
+ERROR 2026-01-04 13:17:24,580 views 9112 5788 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,584 log 9112 5788 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,591 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 500 2055
+ERROR 2026-01-04 13:17:24,731 views 9112 5788 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,734 log 9112 5788 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,739 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 500 2055
+ERROR 2026-01-04 13:17:24,888 views 9112 5788 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,890 log 9112 5788 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 90, in signup
+    new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py", line 11, in create_user
+    raise ValueError("The Email field must be set")
+ValueError: The Email field must be set
+ERROR 2026-01-04 13:17:24,896 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 500 2055
+INFO 2026-01-04 13:17:30,813 basehttp 9112 5788 "GET /signup/ HTTP/1.1" 200 5388
+INFO 2026-01-04 13:19:03,226 basehttp 9112 5788 "GET /signup/ HTTP/1.1" 200 5498
+INFO 2026-01-04 13:19:03,411 basehttp 9112 5788 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 13:19:03,411 basehttp 9112 7528 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 13:19:23,690 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 200 85
+INFO 2026-01-04 13:19:34,013 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 200 85
+INFO 2026-01-04 13:19:48,817 basehttp 9112 5788 "POST /signup/ HTTP/1.1" 200 69
+INFO 2026-01-04 13:19:50,365 basehttp 9112 5788 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 13:19:58,784 basehttp 9112 5788 "POST /login/ HTTP/1.1" 200 77
+INFO 2026-01-04 13:20:00,379 basehttp 9112 5788 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 13:20:09,155 basehttp 9112 5788 "GET /member/my-books/ HTTP/1.1" 200 5057
+INFO 2026-01-04 13:20:11,434 basehttp 9112 5788 "GET /member/reserve-book/ HTTP/1.1" 200 4762

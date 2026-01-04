@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
   <title>Sign Up - LibraFlow</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/toast.css' %}">
   <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-gradient-to-br from-blue-600 to-blue-800 min-h-screen flex items-center justify-center">
@@ -17,38 +19,94 @@
       <h2 class="text-3xl font-bold text-blue-600">Create Your Account</h2>
       <p class="text-gray-600 mt-2">Join LibraFlow as a member</p>
     </div>
-    <form>
+    <form id="signup" method='POST'>
+      {% csrf_token %}
       <div class="grid md:grid-cols-2 gap-6">
         <div>
           <label class="block text-gray-700 font-medium mb-2">Full Name</label>
-          <input type="text" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+          <input type="text" name="full_name" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Email</label>
-          <input type="email" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+          <input type="email" name="email" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
-          <input type="tel" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+          <input type="tel" name="phone_number" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Address</label>
-          <input type="text" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+          <input type="text" name="home_address" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Password</label>
-          <input type="password" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+          <input type="password" name="password" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Confirm Password</label>
-          <input type="password" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+          <input type="password" name="confirm_password" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none" />
         </div>
       </div>
-      <button type="submit" class="w-full mt-8 bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition">Sign Up</button>
+      <button type="submit" id="btn-1" class="w-full mt-8 bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition">Sign Up</button>
+      <button type="submit" id="btn-2" style="opacity: .4; font-style: italic; display:none;" class="w-full mt-8 bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition">Sign Up...</button>
       <p class="mt-6 text-center text-gray-600">
         Already have an account? <a href="/login/" class="text-blue-600 font-bold hover:underline">Login</a>
       </p>
     </form>
   </div>
 </body>
+
+<div id="toast-container"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<script src="{% static 'js/toast.js' %}"></script>
+
+<script>
+        $(document).ready(function() {
+            
+            var csrftoken = $("input[name=csrfmiddlewaretoken]").val();
+
+            $(document).on("submit", "#signup", function(e) {
+                e.preventDefault();
+
+                var btn_1 = $("#btn-1");
+                var btn_2 = $("#btn-2");
+
+                var formData = new FormData(this);
+
+                btn_1.hide();
+                btn_2.show();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/signup/",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: { "X-CSRFToken": csrftoken },
+                    success: function(response) {
+                        btn_1.show();
+                        btn_2.hide();
+
+                        if (response.success) {
+                            showToast(response.message, "success");
+                            setTimeout(() => {
+                                window.location.href = '/login/';
+                            }, 1500);
+
+                        } else {
+                            showToast(response.error || "SignUp failed.", "error");
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        btn_1.show();
+                        btn_2.hide();
+                        showToast("Something went wrong! Please try again.", "error");
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
 </html>
