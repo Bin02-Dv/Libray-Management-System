@@ -1,0 +1,150 @@
+INFO 2026-01-04 09:57:00,352 autoreload 22908 22208 Watching for file changes with StatReloader
+INFO 2026-01-04 09:58:13,336 basehttp 22908 22988 "GET / HTTP/1.1" 200 4574
+WARNING 2026-01-04 09:58:26,815 views 22908 22988 Page not found: /favicon.ico
+WARNING 2026-01-04 09:58:26,893 log 22908 22988 Not Found: /favicon.ico
+WARNING 2026-01-04 09:58:26,894 basehttp 22908 22988 "GET /favicon.ico HTTP/1.1" 404 1950
+INFO 2026-01-04 09:58:30,262 basehttp 22908 22988 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 09:58:30,377 basehttp 22908 22988 "GET /static/css/toast.css HTTP/1.1" 200 1233
+INFO 2026-01-04 09:58:30,472 basehttp 22908 10880 "GET /static/js/toast.js HTTP/1.1" 200 607
+INFO 2026-01-04 09:58:55,652 basehttp 22908 10880 "POST /login/ HTTP/1.1" 200 70
+INFO 2026-01-04 09:59:09,008 basehttp 22908 10880 "GET /dash/ HTTP/1.1" 200 4728
+INFO 2026-01-04 11:11:09,075 basehttp 22908 13340 "GET /manage-books/ HTTP/1.1" 200 18473
+INFO 2026-01-04 11:11:09,471 basehttp 22908 13340 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:11:09,472 basehttp 22908 6332 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-04 11:11:17,690 views 22908 6332 Page not found: /media/default-book-cover.jpg
+WARNING 2026-01-04 11:11:17,734 log 22908 6332 Not Found: /media/default-book-cover.jpg
+WARNING 2026-01-04 11:11:17,736 basehttp 22908 6332 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
+INFO 2026-01-04 11:13:39,585 basehttp 22908 21756 "GET /manage-books/ HTTP/1.1" 200 17905
+INFO 2026-01-04 11:13:39,784 basehttp 22908 21756 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:13:39,784 basehttp 22908 11580 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-04 11:13:52,661 views 22908 21756 Page not found: /media/default-book-cover.jpg
+WARNING 2026-01-04 11:13:52,717 log 22908 21756 Not Found: /media/default-book-cover.jpg
+WARNING 2026-01-04 11:13:52,718 basehttp 22908 21756 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
+INFO 2026-01-04 11:14:41,468 basehttp 22908 21756 "GET /manage-books/ HTTP/1.1" 200 18013
+INFO 2026-01-04 11:14:41,524 basehttp 22908 11580 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 11:14:41,525 basehttp 22908 21756 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:18:04,157 autoreload 22908 22208 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 11:18:12,987 autoreload 18392 7056 Watching for file changes with StatReloader
+INFO 2026-01-04 11:18:26,095 autoreload 18392 7056 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMS\settings.py changed, reloading.
+INFO 2026-01-04 11:18:28,233 autoreload 11800 20348 Watching for file changes with StatReloader
+INFO 2026-01-04 11:19:51,389 autoreload 11800 20348 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py changed, reloading.
+INFO 2026-01-04 11:19:53,803 autoreload 18500 9312 Watching for file changes with StatReloader
+INFO 2026-01-04 11:21:11,061 autoreload 20488 1140 Watching for file changes with StatReloader
+INFO 2026-01-04 11:21:16,733 basehttp 20488 14096 "GET /manage-books/ HTTP/1.1" 302 0
+INFO 2026-01-04 11:21:17,649 basehttp 20488 14096 "GET /login/?next=/manage-books/ HTTP/1.1" 200 4678
+INFO 2026-01-04 11:21:17,820 basehttp 20488 14096 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:21:17,828 basehttp 20488 14096 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 11:21:27,290 basehttp 20488 14096 "POST /login/ HTTP/1.1" 200 70
+INFO 2026-01-04 11:21:28,906 basehttp 20488 14096 "GET /dash/ HTTP/1.1" 200 4691
+INFO 2026-01-04 11:21:35,255 basehttp 20488 14096 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-01-04 11:21:35,265 basehttp 20488 14096 "GET /login/ HTTP/1.1" 200 4678
+WARNING 2026-01-04 11:21:42,585 views 20488 14096 Page not found: /admin
+INFO 2026-01-04 11:21:42,594 basehttp 20488 14096 "GET /admin HTTP/1.1" 301 0
+INFO 2026-01-04 11:21:42,614 basehttp 20488 21664 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-01-04 11:21:43,083 basehttp 20488 21664 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-01-04 11:21:43,300 basehttp 20488 21664 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2026-01-04 11:21:43,348 basehttp 20488 21664 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2026-01-04 11:21:44,230 basehttp 20488 21664 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-01-04 11:21:44,363 basehttp 20488 11108 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-01-04 11:21:44,610 basehttp 20488 12548 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2026-01-04 11:21:44,740 basehttp 20488 12548 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-01-04 11:21:44,741 basehttp 20488 21336 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-01-04 11:21:52,894 basehttp 20488 21336 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-01-04 11:21:52,962 basehttp 20488 21336 "GET /admin/ HTTP/1.1" 200 8549
+INFO 2026-01-04 11:21:53,029 basehttp 20488 21336 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-01-04 11:21:53,071 basehttp 20488 21336 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-01-04 11:21:53,073 basehttp 20488 12548 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-01-04 11:21:59,790 basehttp 20488 12548 "GET /admin/LYMSApp/authmodel/ HTTP/1.1" 200 10041
+INFO 2026-01-04 11:21:59,873 basehttp 20488 12548 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2026-01-04 11:21:59,887 basehttp 20488 21664 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-01-04 11:21:59,986 basehttp 20488 21336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-04 11:21:59,989 basehttp 20488 14328 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-01-04 11:21:59,996 basehttp 20488 17248 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-01-04 11:22:00,052 basehttp 20488 21664 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-01-04 11:22:00,053 basehttp 20488 12548 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-01-04 11:22:00,147 basehttp 20488 11108 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 200 87533
+INFO 2026-01-04 11:22:00,161 basehttp 20488 21336 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-01-04 11:22:00,275 basehttp 20488 21336 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-01-04 11:22:00,459 basehttp 20488 14328 "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 200 163184
+INFO 2026-01-04 11:22:00,548 basehttp 20488 14328 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-01-04 11:22:03,211 basehttp 20488 14328 "GET /admin/LYMSApp/profile/ HTTP/1.1" 200 8759
+INFO 2026-01-04 11:22:03,257 basehttp 20488 14328 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-04 11:22:05,295 basehttp 20488 14328 "GET /admin/LYMSApp/profile/add/ HTTP/1.1" 200 11916
+INFO 2026-01-04 11:22:05,341 basehttp 20488 21336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-04 11:22:05,357 basehttp 20488 14328 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2026-01-04 11:22:05,380 basehttp 20488 11108 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-01-04 11:22:05,387 basehttp 20488 14328 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2026-01-04 11:22:05,396 basehttp 20488 21336 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+INFO 2026-01-04 11:22:05,441 basehttp 20488 14328 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-01-04 11:22:19,855 basehttp 20488 14328 "POST /admin/LYMSApp/profile/add/ HTTP/1.1" 302 0
+INFO 2026-01-04 11:22:19,896 basehttp 20488 14328 "GET /admin/LYMSApp/profile/ HTTP/1.1" 200 10275
+INFO 2026-01-04 11:22:19,942 basehttp 20488 14328 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-04 11:22:20,060 basehttp 20488 14328 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2026-01-04 11:22:24,429 basehttp 20488 14328 "POST /admin/logout/ HTTP/1.1" 200 3568
+WARNING 2026-01-04 11:22:35,108 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:35,110 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:44,250 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:44,251 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:45,176 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:45,177 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:45,375 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:45,376 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:45,536 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:45,537 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:45,672 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:45,673 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:45,806 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:45,806 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:45,941 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:45,942 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:46,090 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:46,091 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:46,228 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:46,229 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:46,373 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:46,374 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:46,524 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:46,525 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+WARNING 2026-01-04 11:22:46,655 log 20488 14328 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-01-04 11:22:46,656 basehttp 20488 14328 "POST /login/ HTTP/1.1" 403 1004
+INFO 2026-01-04 11:23:00,356 basehttp 20488 14328 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 11:23:00,426 basehttp 20488 21336 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 11:23:00,436 basehttp 20488 14328 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:23:10,299 basehttp 20488 14328 "POST /login/ HTTP/1.1" 200 70
+INFO 2026-01-04 11:23:11,840 basehttp 20488 14328 "GET /dash/ HTTP/1.1" 200 4728
+INFO 2026-01-04 11:23:17,457 basehttp 20488 14328 "GET /manage-books/ HTTP/1.1" 200 15914
+INFO 2026-01-04 11:24:56,758 basehttp 20488 14328 "POST /manage-books/ HTTP/1.1" 200 57
+INFO 2026-01-04 11:24:58,328 basehttp 20488 14328 "GET /manage-books/ HTTP/1.1" 200 16946
+INFO 2026-01-04 11:24:58,367 basehttp 20488 21336 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 11:24:58,368 basehttp 20488 14328 "GET /static/css/toast.css HTTP/1.1" 304 0
+WARNING 2026-01-04 11:25:03,316 views 20488 14328 Page not found: /media/default-book-cover.jpg
+WARNING 2026-01-04 11:25:03,317 log 20488 14328 Not Found: /media/default-book-cover.jpg
+WARNING 2026-01-04 11:25:03,321 basehttp 20488 14328 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
+INFO 2026-01-04 11:27:23,684 basehttp 20488 14328 "GET /manage-books/ HTTP/1.1" 200 16938
+INFO 2026-01-04 11:27:23,766 basehttp 20488 14328 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:27:23,770 basehttp 20488 14328 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 11:27:50,021 basehttp 20488 14328 "POST /books/update/ HTTP/1.1" 200 240
+INFO 2026-01-04 11:28:01,585 basehttp 20488 14328 "POST /books/update/ HTTP/1.1" 200 240
+INFO 2026-01-04 11:28:06,438 basehttp 20488 14328 "GET /manage-books/ HTTP/1.1" 200 16942
+INFO 2026-01-04 11:28:18,124 basehttp 20488 14328 "POST /books/update/ HTTP/1.1" 200 240
+INFO 2026-01-04 11:28:20,744 basehttp 20488 14328 "GET /manage-books/ HTTP/1.1" 200 16938
+INFO 2026-01-04 11:29:33,704 autoreload 20488 1140 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py changed, reloading.
+INFO 2026-01-04 11:29:38,384 autoreload 20040 76 Watching for file changes with StatReloader
+INFO 2026-01-04 11:29:40,526 autoreload 20040 76 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\models.py changed, reloading.
+INFO 2026-01-04 11:29:42,653 autoreload 18672 10488 Watching for file changes with StatReloader
+INFO 2026-01-04 11:30:18,871 autoreload 4672 17328 Watching for file changes with StatReloader
+INFO 2026-01-04 11:30:23,937 basehttp 4672 13128 "GET /manage-books/ HTTP/1.1" 200 16938
+INFO 2026-01-04 11:30:24,095 basehttp 4672 13128 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:30:24,104 basehttp 4672 13128 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 11:34:30,111 basehttp 4672 13128 "POST /manage-books/ HTTP/1.1" 200 57
+INFO 2026-01-04 11:34:31,801 basehttp 4672 13128 "GET /manage-books/ HTTP/1.1" 200 18131
+INFO 2026-01-04 11:34:31,893 basehttp 4672 13128 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 11:34:31,915 basehttp 4672 13128 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 11:35:01,582 basehttp 4672 13128 "GET /manage-books/ HTTP/1.1" 200 18131
+WARNING 2026-01-04 11:35:07,750 views 4672 13128 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 11:35:07,788 log 4672 13128 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 11:35:07,789 basehttp 4672 13128 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 11:35:22,642 basehttp 4672 13128 "GET /manage-books/ HTTP/1.1" 200 18131
+WARNING 2026-01-04 11:35:22,697 views 4672 13128 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 11:35:22,734 log 4672 13128 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 11:35:22,747 basehttp 4672 13128 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950

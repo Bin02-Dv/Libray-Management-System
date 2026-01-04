@@ -1,9 +1,32 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from cloudinary.models import CloudinaryField
 from django.utils import timezone
 
 # Create your models here.
+
+class UserManager(BaseUserManager):
+    def create_user(self, email, password=None, **extra_fields):
+        if not email:
+            raise ValueError("The Email field must be set")
+
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, email, password=None, **extra_fields):
+        extra_fields.setdefault("is_staff", True)
+        extra_fields.setdefault("is_superuser", True)
+        extra_fields.setdefault("is_active", True)
+
+        if extra_fields.get("is_staff") is not True:
+            raise ValueError("Superuser must have is_staff=True.")
+        if extra_fields.get("is_superuser") is not True:
+            raise ValueError("Superuser must have is_superuser=True.")
+
+        return self.create_user(email, password, **extra_fields)
 
 class AuthModel(AbstractUser):
     username = None
@@ -27,7 +50,7 @@ class Books(models.Model):
     ISBN = models.CharField(max_length=20, unique=True)
     publisher = models.CharField(max_length=100)
     category = models.CharField(max_length=50)
-    cover_image = CloudinaryField('LBRY/books', blank=True, null=True)
+    cover_image = CloudinaryField('LBRY', folder='LBRY/books', blank=True, null=True)
 
     def available_copies(self):
         return self.book_copies.filter(is_available=True).count()
