@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 
 from django.db import transaction
+from django.db.models import Exists, OuterRef, Q
 from django.utils import timezone
 from datetime import timedelta
 
@@ -122,24 +123,125 @@ def member_dash(request):
 
 @login_required(login_url='/login/')
 def member_books(request):
-    return render(request, "members/my-books.html")
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
+    context = {
+        "profile": user_profile
+    }
+    return render(request, "members/my-books.html", context)
 
 @login_required(login_url='/login/')
 def member_reserve_books(request):
-    return render(request, "members/reserve-books.html")
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
+    context = {
+        "profile": user_profile
+    }
+    return render(request, "members/reserve-books.html", context)
 
 @login_required(login_url='/login/')
 def member_profile(request):
-    return render(request, "members/profile.html")
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
+    context = {
+        "profile": user_profile
+    }
+    return render(request, "members/profile.html", context)
 
 @login_required(login_url='/login/')
 def member_fines(request):
-    return render(request, "members/fines.html")
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
+    context = {
+        "profile": user_profile
+    }
+    return render(request, "members/fines.html", context)
 
 @login_required(login_url='/login/')
 def member_catalog(request):
-    return render(request, "members/catalog.html")
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
+    context = {
+        "profile": user_profile
+    }
+    return render(request, "members/catalog.html", context)
 
+@login_required
+def search_books_ajax(request):
+    q = request.GET.get('q', '')
+
+    books = models.Books.objects.filter(
+        Q(title__icontains=q) |
+        Q(author__icontains=q) |
+        Q(ISBN__icontains=q)
+    ).distinct()
+
+    results = []
+
+    for book in books:
+        active_issue = models.Issue.objects.filter(
+            copy=OuterRef('pk'),
+            returned_at__isnull=True
+        )
+
+        available_copy = models.BookCopy.objects.filter(
+            book=book
+        ).annotate(
+            has_active_issue=Exists(active_issue)
+        ).filter(
+            has_active_issue=False
+        ).first()
+
+        results.append({
+            'id': book.id,
+            'title': book.title,
+            'author': book.author,
+            'available': bool(available_copy),
+            'cover': book.cover_image.url if book.cover_image else ''
+        })
+
+    return JsonResponse({'results': results})
+
+@login_required
+def reserve_book_ajax(request):
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
+    book_id = request.POST.get('book_id')
+    
+    active_issue = models.Issue.objects.filter(
+        copy=OuterRef('pk'),
+        returned_at__isnull=True
+    )
+
+    # Find a free copy
+    free_copy = models.BookCopy.objects.filter(
+        book_id=book_id
+    ).annotate(
+        has_active_issue=Exists(active_issue)
+    ).filter(
+        has_active_issue=False
+    ).first()
+
+    if not free_copy:
+        return JsonResponse({
+            'success': False,
+            'message': 'No available copies'
+        })
+
+    models.Issue.objects.create(
+        member=user_profile,
+        copy=free_copy,
+        issued_at=timezone.now().date(),
+        due_at=timezone.now().date() + timedelta(days=14)
+    )
+
+    return JsonResponse({'success': True})
 
 # admin section
 
