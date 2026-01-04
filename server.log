@@ -1619,3 +1619,108 @@ INFO 2026-01-04 13:19:58,784 basehttp 9112 5788 "POST /login/ HTTP/1.1" 200 77
 INFO 2026-01-04 13:20:00,379 basehttp 9112 5788 "GET /member/dash/ HTTP/1.1" 200 4943
 INFO 2026-01-04 13:20:09,155 basehttp 9112 5788 "GET /member/my-books/ HTTP/1.1" 200 5057
 INFO 2026-01-04 13:20:11,434 basehttp 9112 5788 "GET /member/reserve-book/ HTTP/1.1" 200 4762
+INFO 2026-01-04 14:23:48,541 autoreload 13464 17772 Watching for file changes with StatReloader
+INFO 2026-01-04 14:32:13,721 autoreload 13464 17772 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 14:32:17,962 autoreload 14292 12496 Watching for file changes with StatReloader
+INFO 2026-01-04 14:35:29,586 basehttp 14292 7524 "GET /member/reserve-book/ HTTP/1.1" 200 6676
+INFO 2026-01-04 14:37:36,726 autoreload 14292 12496 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 14:37:39,850 autoreload 21052 10444 Watching for file changes with StatReloader
+INFO 2026-01-04 14:37:41,768 autoreload 21052 10444 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\urls.py changed, reloading.
+INFO 2026-01-04 14:37:46,236 autoreload 19640 9236 Watching for file changes with StatReloader
+INFO 2026-01-04 14:37:50,186 basehttp 19640 11552 "GET /member/reserve-book/ HTTP/1.1" 200 6676
+INFO 2026-01-04 14:38:10,036 basehttp 19640 11552 "GET /books/search/?q=Life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 14:39:52,502 basehttp 19640 11552 "GET /member/reserve-book/ HTTP/1.1" 200 6690
+INFO 2026-01-04 14:40:02,417 basehttp 19640 11552 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 14:40:26,182 basehttp 19640 11552 "GET /member/reserve-book/ HTTP/1.1" 200 6694
+INFO 2026-01-04 14:40:40,547 basehttp 19640 11552 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 14:40:41,570 basehttp 19640 11552 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+WARNING 2026-01-04 14:40:44,354 views 19640 11552 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 14:40:44,386 log 19640 11552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 14:40:44,424 basehttp 19640 11552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 14:45:11,160 basehttp 19640 7992 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 14:45:14,042 basehttp 19640 7992 "GET /member/reserve-book/ HTTP/1.1" 200 6694
+WARNING 2026-01-04 14:45:14,233 views 19640 7992 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 14:45:14,241 log 19640 7992 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 14:45:14,242 basehttp 19640 7992 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 14:45:26,264 basehttp 19640 7992 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 14:45:42,203 basehttp 19640 7992 "GET /member/reserve-book/ HTTP/1.1" 200 6690
+WARNING 2026-01-04 14:45:42,512 views 19640 7992 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 14:45:42,620 log 19640 7992 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 14:45:42,621 basehttp 19640 7992 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 14:46:18,460 basehttp 19640 7992 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 14:49:56,310 basehttp 19640 7992 "GET /member/profile/ HTTP/1.1" 200 5448
+INFO 2026-01-04 15:01:51,674 basehttp 19640 9156 "GET /member/profile/ HTTP/1.1" 200 5445
+INFO 2026-01-04 15:02:12,207 basehttp 19640 9156 "GET /member/profile/ HTTP/1.1" 200 5456
+INFO 2026-01-04 15:02:43,112 basehttp 19640 9156 "GET /member/profile/ HTTP/1.1" 200 5465
+WARNING 2026-01-04 15:02:57,324 views 19640 9156 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 15:02:57,333 log 19640 9156 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 15:02:57,335 basehttp 19640 9156 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 15:03:07,938 basehttp 19640 9156 "GET /member/fines/ HTTP/1.1" 200 4785
+INFO 2026-01-04 15:03:25,674 basehttp 19640 9156 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 15:03:48,347 basehttp 19640 9156 "GET /member/my-books/ HTTP/1.1" 200 5091
+INFO 2026-01-04 15:04:18,747 basehttp 19640 9156 "GET /member/reserve-book/ HTTP/1.1" 200 6690
+INFO 2026-01-04 15:04:26,223 basehttp 19640 9156 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 15:04:29,339 basehttp 19640 9156 "GET /member/profile/ HTTP/1.1" 200 5465
+INFO 2026-01-04 15:04:33,989 basehttp 19640 9156 "GET /member/fines/ HTTP/1.1" 200 4785
+INFO 2026-01-04 15:04:37,766 basehttp 19640 9156 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 15:04:39,458 basehttp 19640 9156 "GET /member/catalog/ HTTP/1.1" 200 7094
+INFO 2026-01-04 15:16:50,577 basehttp 19640 18400 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-01-04 15:16:50,645 basehttp 19640 18400 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 15:16:51,006 basehttp 19640 18400 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 15:16:51,032 basehttp 19640 18400 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 15:17:06,847 basehttp 19640 18400 "POST /login/ HTTP/1.1" 200 70
+INFO 2026-01-04 15:17:10,316 basehttp 19640 18400 "GET /dash/ HTTP/1.1" 200 4730
+INFO 2026-01-04 15:17:14,975 basehttp 19640 18400 "GET /manage-books/ HTTP/1.1" 200 17425
+INFO 2026-01-04 15:17:21,651 basehttp 19640 18400 "GET /manage-members/ HTTP/1.1" 200 22681
+WARNING 2026-01-04 15:17:31,117 views 19640 18400 Page not found: /media/default-book-cover.jpg
+WARNING 2026-01-04 15:17:31,119 log 19640 18400 Not Found: /media/default-book-cover.jpg
+WARNING 2026-01-04 15:17:31,121 basehttp 19640 18400 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
+INFO 2026-01-04 15:17:41,886 basehttp 19640 18400 "GET /circulation/ HTTP/1.1" 200 6853
+INFO 2026-01-04 15:17:56,403 basehttp 19640 18400 "GET /fines/ HTTP/1.1" 200 4903
+INFO 2026-01-04 15:17:56,453 basehttp 19640 18400 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 15:17:56,459 basehttp 19640 18400 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 15:18:02,935 basehttp 19640 18400 "GET /fines/ HTTP/1.1" 200 4903
+INFO 2026-01-04 15:18:14,566 basehttp 19640 18400 "GET /reports/ HTTP/1.1" 200 6312
+INFO 2026-01-04 15:18:21,954 basehttp 19640 18400 "GET /fines/ HTTP/1.1" 200 4903
+INFO 2026-01-04 15:18:29,819 basehttp 19640 18400 "GET /circulation/ HTTP/1.1" 200 6853
+INFO 2026-01-04 15:20:11,347 basehttp 19640 18400 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-01-04 15:20:11,364 basehttp 19640 18400 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 15:20:11,526 basehttp 19640 18400 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 15:20:11,537 basehttp 19640 18400 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 15:20:19,219 basehttp 19640 18400 "POST /login/ HTTP/1.1" 200 65
+INFO 2026-01-04 15:20:27,400 basehttp 19640 18400 "POST /login/ HTTP/1.1" 200 77
+INFO 2026-01-04 15:20:28,956 basehttp 19640 18400 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 15:20:34,953 basehttp 19640 18400 "GET /member/reserve-book/ HTTP/1.1" 200 6676
+INFO 2026-01-04 15:20:44,033 basehttp 19640 18400 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 15:21:27,363 autoreload 19640 9236 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 15:21:37,703 autoreload 14740 23908 Watching for file changes with StatReloader
+INFO 2026-01-04 15:21:42,659 basehttp 14740 15332 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 15:23:10,162 autoreload 14740 23908 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 15:23:13,061 autoreload 3068 13016 Watching for file changes with StatReloader
+INFO 2026-01-04 15:23:17,340 basehttp 3068 16180 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+INFO 2026-01-04 15:24:15,915 autoreload 3068 13016 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 15:24:18,309 autoreload 15664 6884 Watching for file changes with StatReloader
+INFO 2026-01-04 15:24:41,919 autoreload 15664 6884 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 15:24:43,847 autoreload 3748 7436 Watching for file changes with StatReloader
+INFO 2026-01-04 15:29:16,575 basehttp 3748 4192 "GET /member/reserve-book/ HTTP/1.1" 200 6676
+INFO 2026-01-04 15:29:27,402 basehttp 3748 4192 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 15:29:41,823 basehttp 3748 4192 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 15:29:41,864 basehttp 3748 4192 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 15:29:44,952 basehttp 3748 4192 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-01-04 15:29:44,977 basehttp 3748 4192 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 15:29:45,027 basehttp 3748 4192 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 15:29:45,030 basehttp 3748 22376 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 15:29:53,692 basehttp 3748 4192 "POST /login/ HTTP/1.1" 200 70
+INFO 2026-01-04 15:29:55,296 basehttp 3748 4192 "GET /dash/ HTTP/1.1" 200 4730
+INFO 2026-01-04 15:30:03,197 basehttp 3748 4192 "GET /manage-books/ HTTP/1.1" 200 17425
+INFO 2026-01-04 15:31:22,302 basehttp 3748 4192 "POST /manage-books/ HTTP/1.1" 200 57
+INFO 2026-01-04 15:31:23,838 basehttp 3748 4192 "GET /manage-books/ HTTP/1.1" 200 18614
+INFO 2026-01-04 15:31:23,894 basehttp 3748 4192 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 15:31:23,896 basehttp 3748 22376 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 15:31:46,054 basehttp 3748 22376 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-01-04 15:31:46,074 basehttp 3748 22376 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 15:31:56,226 basehttp 3748 22376 "POST /login/ HTTP/1.1" 200 77
+INFO 2026-01-04 15:31:57,757 basehttp 3748 22376 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 15:32:02,096 basehttp 3748 22376 "GET /member/reserve-book/ HTTP/1.1" 200 6676
+INFO 2026-01-04 15:32:11,173 basehttp 3748 22376 "GET /books/search/?q=a%20pale%20green%20eye HTTP/1.1" 200 209
+INFO 2026-01-04 15:32:29,744 basehttp 3748 22376 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
