@@ -80,7 +80,13 @@ def catalog(request):
 
 @login_required(login_url='/login/')
 def member_dash(request):
-    return render(request, "members/dash.html")
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
+    context = {
+        "profile": user_profile
+    }
+    return render(request, "members/dash.html", context)
 
 @login_required(login_url='/login/')
 def member_books(request):
@@ -133,10 +139,15 @@ def admin_manage_book(request):
         ISBN = request.POST.get("ISBN")
         publisher = request.POST.get("publisher")
         category = request.POST.get("category")
+        copy_id = request.POST.get("copy_id")
         cover_image = request.FILES.get("cover_image")
         
-        models.Books.objects.create(
+        new_book = models.Books.objects.create(
             title=title, author=author, ISBN=ISBN, publisher=publisher, category=category, cover_image=cover_image
+        )
+        
+        models.BookCopy.objects.create(
+            book=new_book, copy_id=copy_id
         )
         
         return JsonResponse({
@@ -146,7 +157,7 @@ def admin_manage_book(request):
     
     context = {
         "current_user": current_user,
-        "books": books
+        "books": books,
     }
     return render(request, "Theadmin/manage-book.html", context)
 
@@ -203,7 +214,9 @@ def admin_manage_members(request):
             })
         
         else:
-            new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member", username=email)
+            new_member = models.AuthModel.objects.create_user(email=email, phone_number=phone_number, role="member")
+            new_member.set_password(password)
+            new_member.save()
             
             if full_name or home_address:
                 models.Profile.objects.create(user=new_member, full_name=full_name, home_address=home_address)

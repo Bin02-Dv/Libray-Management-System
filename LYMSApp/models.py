@@ -28,6 +28,7 @@ class UserManager(BaseUserManager):
 
         return self.create_user(email, password, **extra_fields)
 
+
 class AuthModel(AbstractUser):
     username = None
 
@@ -37,6 +38,11 @@ class AuthModel(AbstractUser):
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
+    
+    objects = UserManager()
+    
+    def __str__(self):
+        return self.email
 
 class Profile(models.Model):
     user = models.ForeignKey(AuthModel, on_delete=models.CASCADE)
