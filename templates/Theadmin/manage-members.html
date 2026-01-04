@@ -44,7 +44,7 @@
                         )"
                                 class="text-blue-600 hover:underline font-medium">Edit</button>-->
 
-                        <button onclick="openBorrowedBooksModal('Alamin Bin Ahmad', ['Life of science'])"
+                        <button onclick="openBorrowedBooksModal('{{member.full_name}}', ['Life of science'])"
                                 class="text-green-600 hover:underline font-medium">View Borrowed</button>
 
                         <button onclick="if(confirm('Delete member {{ member.full_name|escapejs }}?'))"
