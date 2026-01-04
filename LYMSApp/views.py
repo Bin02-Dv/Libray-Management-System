@@ -133,12 +133,10 @@ def admin_manage_book(request):
         ISBN = request.POST.get("ISBN")
         publisher = request.POST.get("publisher")
         category = request.POST.get("category")
-        copies = request.POST.get("copies")
         cover_image = request.FILES.get("cover_image")
         
         models.Books.objects.create(
-            title=title, author=author, ISBN=ISBN, pbulisher=publisher, category=category, copies=copies,
-            cover_imge=cover_image
+            title=title, author=author, ISBN=ISBN, publisher=publisher, category=category, cover_image=cover_image
         )
         
         return JsonResponse({
