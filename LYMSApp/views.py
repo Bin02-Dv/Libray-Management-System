@@ -125,7 +125,7 @@ def member_dash(request):
 def member_books(request):
     current_user = request.user
     user_profile = models.Profile.objects.filter(user=current_user).first()
-    books = models.Issue.objects.filter(member=user_profile).order_by("-id")
+    books = models.Issue.objects.filter((Q(member=user_profile) & Q(returned_at__isnull=True))).order_by("-id")
     
     context = {
         "profile": user_profile,

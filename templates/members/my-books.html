@@ -27,8 +27,12 @@
                     <td class="px-6 py-4 font-medium">{{book.copy.book.title}}</td>
                     <td class="px-6 py-4">{{book.copy.book.author}}</td>
                     <td class="px-6 py-4">{{book.issued_at}}</td>
-                    <!--<td class="px-6 py-4 text-red-600 font-medium">{{book.due_at}} (Overdue)</td>-->
+                    {% if book.is_overdue %}
+                    <td class="text-red-600 font-bold">Overdue (₦{{ book.fine_amount }})</td>
+                    {% else %}
                     <td class="px-6 py-4 text-red-600 font-medium">{{book.due_at}}</td>
+                    {% endif %}
+                    <!--<td class="px-6 py-4 text-red-600 font-medium">{{book.due_at}} (Overdue)</td>-->
                     <td class="px-6 py-4 space-x-2">
                         <button
                             onclick="renewIssue({{ book.id }})"
