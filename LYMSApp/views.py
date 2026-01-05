@@ -125,11 +125,57 @@ def member_dash(request):
 def member_books(request):
     current_user = request.user
     user_profile = models.Profile.objects.filter(user=current_user).first()
+    books = models.Issue.objects.filter((Q(member=user_profile) & Q(returned_at__isnull=True))).order_by("-id")
     
     context = {
-        "profile": user_profile
+        "profile": user_profile,
+        "books": books
     }
     return render(request, "members/my-books.html", context)
+
+@login_required
+def renew_issue_ajax(request):
+    issue_id = request.POST.get('issue_id')
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+
+    if issue.renewed_times >= models.Issue.MAX_RENEWALS:
+        return JsonResponse({
+            'success': False,
+            'message': 'Maximum renewals reached'
+        })
+
+    issue.due_at += timedelta(days=14)
+    issue.renewed_times += 1
+    issue.save()
+
+    return JsonResponse({
+        'success': True,
+        'new_due_date': issue.due_at
+    })
+
+@login_required
+def return_issue_ajax(request):
+    issue_id = request.POST.get('issue_id')
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+
+    issue.returned_at = timezone.now().date()
+    issue.save()
+
+    return JsonResponse({'success': True})
 
 @login_required(login_url='/login/')
 def member_reserve_books(request):

@@ -20,20 +20,112 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="border-t hover:bg-gray-50">
-                    <td class="px-6 py-4"><img src="https://mediamodifier.com/blog/wp-content/uploads/2020/02/01-paperback-book-cover-mockup-standing.jpg" alt="Book" class="w-16 h-24 object-cover rounded"/></td>
-                    <td class="px-6 py-4 font-medium">1984</td>
-                    <td class="px-6 py-4">George Orwell</td>
-                    <td class="px-6 py-4">Dec 10, 2025</td>
-                    <td class="px-6 py-4 text-red-600 font-medium">Dec 25, 2025 (Overdue)</td>
+                {% if books %}
+                {% for book in books %}
+                <tr id="issue-row-{{ book.id }}" class="border-t hover:bg-gray-50">
+                    <td class="px-6 py-4"><img src="{{book.copy.book.cover_image.url}}" alt="Book" class="w-16 h-24 object-cover rounded"/></td>
+                    <td class="px-6 py-4 font-medium">{{book.copy.book.title}}</td>
+                    <td class="px-6 py-4">{{book.copy.book.author}}</td>
+                    <td class="px-6 py-4">{{book.issued_at}}</td>
+                    {% if book.is_overdue %}
+                    <td class="text-red-600 font-bold">Overdue (₦{{ book.fine_amount }})</td>
+                    {% else %}
+                    <td class="px-6 py-4 text-red-600 font-medium">{{book.due_at}}</td>
+                    {% endif %}
+                    <!--<td class="px-6 py-4 text-red-600 font-medium">{{book.due_at}} (Overdue)</td>-->
                     <td class="px-6 py-4 space-x-2">
-                        <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="alert('Renewed!')">Renew</button>
-                        <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700" onclick="alert('Returned!')">Return</button>
+                        <button
+                            onclick="renewIssue({{ book.id }})"
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                            Renew
+                        </button>
+
+                        <button
+                            id="btn-1"
+                            onclick="returnIssue({{ book.id }})"
+                            class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                            Return
+                        </button>
+                        <button
+                            id="btn-2"
+                            style="opacity: .4; font-style: italic; display:none;"
+                            onclick="returnIssue({{ book.id }})"
+                            class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                            Return
+                        </button>
                     </td>
                 </tr>
+                {% endfor %}
+                {% else %}
+                <tr class="border-t hover:bg-gray-50">
+                    <td class="px-6 py-4">No Books yet!</td>
+                </tr>
+                {% endif %}
             </tbody>
         </table>
     </div>
 </main>
+
+<script>
+function renewIssue(issueId) {
+    const formData = new FormData();
+    var btn_1 = $("#btn-1");
+    var btn_2 = $("#btn-2");
+
+    formData.append('issue_id', issueId);
+    formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+    btn_1.hide();
+    btn_2.show();
+
+    fetch('/issues/renew/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        btn_1.show();
+        btn_2.hide();
+        if (data.success) {
+            const row = document.getElementById(`issue-row-${issueId}`);
+            row.querySelector('td:nth-child(5)').innerText = data.new_due_date;
+            showToast('Book renewed successfully', 'success');
+        } else {
+            showToast(data.message, "error");
+        }
+    });
+}
+
+function returnIssue(issueId) {
+    if (!confirm('Return this book?')) return;
+
+    const formData = new FormData();
+    var btn_1 = $("#btn-1");
+    var btn_2 = $("#btn-2");
+
+    formData.append('issue_id', issueId);
+    formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+
+    btn_1.hide();
+    btn_2.show();
+
+    fetch('/issues/return/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        btn_1.show();
+        btn_2.hide();
+
+        if (data.success) {
+            document.getElementById(`issue-row-${issueId}`).remove();
+            showToast('Book returned successfully', 'success');
+        }
+    });
+}
+</script>
+
 
 {% endblock content %}

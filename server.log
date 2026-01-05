@@ -1989,3 +1989,321 @@ WARNING 2026-01-04 19:16:28,970 log 23068 9152 Not Found: /media/default-book-co
 WARNING 2026-01-04 19:16:28,971 basehttp 23068 9152 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
 INFO 2026-01-04 19:22:33,578 autoreload 23068 17220 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
 INFO 2026-01-04 19:22:36,064 autoreload 1068 19852 Watching for file changes with StatReloader
+INFO 2026-01-05 13:39:48,795 autoreload 16420 19012 Watching for file changes with StatReloader
+INFO 2026-01-05 13:40:09,538 basehttp 16420 1692 "GET / HTTP/1.1" 200 4574
+INFO 2026-01-05 13:40:16,966 basehttp 16420 1692 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-05 13:40:17,284 basehttp 16420 1692 "GET /static/css/toast.css HTTP/1.1" 200 1233
+INFO 2026-01-05 13:40:17,428 basehttp 16420 7312 "GET /static/js/toast.js HTTP/1.1" 200 607
+WARNING 2026-01-05 13:40:22,300 views 16420 7312 Page not found: /favicon.ico
+WARNING 2026-01-05 13:40:22,412 log 16420 7312 Not Found: /favicon.ico
+WARNING 2026-01-05 13:40:22,414 basehttp 16420 7312 "GET /favicon.ico HTTP/1.1" 404 1950
+INFO 2026-01-05 13:40:34,954 basehttp 16420 7312 "POST /login/ HTTP/1.1" 200 65
+INFO 2026-01-05 13:40:41,271 basehttp 16420 7312 "POST /login/ HTTP/1.1" 200 77
+INFO 2026-01-05 13:40:42,941 basehttp 16420 7312 "GET /member/dash/ HTTP/1.1" 200 5244
+INFO 2026-01-05 13:40:46,923 basehttp 16420 7312 "GET /member/my-books/ HTTP/1.1" 200 5392
+INFO 2026-01-05 13:41:38,457 basehttp 16420 7312 "GET /member/reserve-book/ HTTP/1.1" 200 7006
+INFO 2026-01-05 13:41:38,574 basehttp 16420 1692 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 13:41:38,575 basehttp 16420 7312 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 13:42:33,948 autoreload 16420 19012 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-05 13:42:39,812 autoreload 3952 1816 Watching for file changes with StatReloader
+INFO 2026-01-05 13:44:05,385 basehttp 3952 17564 "GET /member/my-books/ HTTP/1.1" 200 4628
+INFO 2026-01-05 13:44:05,487 basehttp 3952 17564 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 13:44:05,488 basehttp 3952 18304 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 13:45:54,863 basehttp 3952 18304 "GET /member/my-books/ HTTP/1.1" 200 5455
+INFO 2026-01-05 13:45:54,941 basehttp 3952 17564 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 13:45:54,941 basehttp 3952 18304 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 13:47:37,795 basehttp 3952 18304 "GET /member/my-books/ HTTP/1.1" 200 5465
+INFO 2026-01-05 13:47:37,839 basehttp 3952 18304 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 13:47:37,841 basehttp 3952 17564 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 13:50:02,262 basehttp 3952 18304 "GET /member/my-books/ HTTP/1.1" 200 5558
+INFO 2026-01-05 13:50:02,546 basehttp 3952 18304 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 13:50:02,550 basehttp 3952 18304 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 13:57:26,143 autoreload 3952 1816 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-05 13:57:36,173 autoreload 9820 19544 Watching for file changes with StatReloader
+INFO 2026-01-05 13:58:31,181 autoreload 9820 19544 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-05 13:58:33,595 autoreload 9152 21304 Watching for file changes with StatReloader
+INFO 2026-01-05 13:58:35,715 autoreload 9152 21304 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\urls.py changed, reloading.
+INFO 2026-01-05 13:58:37,155 autoreload 6152 17588 Watching for file changes with StatReloader
+INFO 2026-01-05 14:00:11,355 basehttp 6152 14632 "GET /member/my-books/ HTTP/1.1" 200 7038
+INFO 2026-01-05 14:00:11,586 basehttp 6152 14632 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:00:11,590 basehttp 6152 13996 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 14:05:13,288 basehttp 6152 13996 "GET /member/my-books/ HTTP/1.1" 200 7619
+INFO 2026-01-05 14:05:13,386 basehttp 6152 13996 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:05:13,394 basehttp 6152 13996 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 14:06:20,854 basehttp 6152 13996 "GET /member/my-books/ HTTP/1.1" 200 7769
+INFO 2026-01-05 14:06:20,896 basehttp 6152 13996 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:06:20,902 basehttp 6152 13996 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 14:06:29,805 basehttp 6152 13996 "POST /issues/return/ HTTP/1.1" 200 17
+INFO 2026-01-05 14:07:18,470 basehttp 6152 13996 "GET /member/my-books/ HTTP/1.1" 200 7776
+INFO 2026-01-05 14:07:22,253 basehttp 6152 13996 "GET /member/my-books/ HTTP/1.1" 200 7776
+INFO 2026-01-05 14:07:22,309 basehttp 6152 13996 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:07:22,317 basehttp 6152 13996 "GET /static/js/toast.js HTTP/1.1" 304 0
+ERROR 2026-01-05 14:07:27,290 views 6152 13996 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:07:28,118 log 6152 13996 Internal Server Error: /issues/return/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:07:28,123 basehttp 6152 13996 "POST /issues/return/ HTTP/1.1" 500 2055
+ERROR 2026-01-05 14:07:35,163 views 6152 13996 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:07:35,167 log 6152 13996 Internal Server Error: /issues/return/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:07:35,179 basehttp 6152 13996 "POST /issues/return/ HTTP/1.1" 500 2055
+INFO 2026-01-05 14:07:46,242 basehttp 6152 13996 "GET /member/my-books/ HTTP/1.1" 200 7776
+WARNING 2026-01-05 14:07:49,651 views 6152 13996 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-05 14:07:49,657 log 6152 13996 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-05 14:07:49,667 basehttp 6152 13996 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+ERROR 2026-01-05 14:07:54,242 views 6152 13996 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:07:54,251 log 6152 13996 Internal Server Error: /issues/return/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:07:54,265 basehttp 6152 13996 "POST /issues/return/ HTTP/1.1" 500 2055
+INFO 2026-01-05 14:14:11,826 autoreload 14028 16792 Watching for file changes with StatReloader
+INFO 2026-01-05 14:14:32,074 basehttp 14028 19092 "GET /member/my-books/ HTTP/1.1" 200 7776
+INFO 2026-01-05 14:14:32,441 basehttp 14028 19092 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:14:32,447 basehttp 14028 13448 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-05 14:14:32,699 views 14028 13448 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-05 14:14:32,711 log 14028 13448 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-05 14:14:32,712 basehttp 14028 13448 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+ERROR 2026-01-05 14:14:44,194 views 14028 13448 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:14:44,226 log 14028 13448 Internal Server Error: /issues/return/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:14:44,238 basehttp 14028 13448 "POST /issues/return/ HTTP/1.1" 500 2055
+INFO 2026-01-05 14:23:11,869 basehttp 14028 7544 "GET /member/my-books/ HTTP/1.1" 200 7807
+WARNING 2026-01-05 14:23:12,031 views 14028 7544 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-01-05 14:23:12,072 basehttp 14028 3908 "GET /static/css/toast.css HTTP/1.1" 304 0
+WARNING 2026-01-05 14:23:12,141 log 14028 7544 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-01-05 14:23:12,145 basehttp 14028 3908 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-05 14:23:12,149 basehttp 14028 7544 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-05 14:23:38,134 basehttp 14028 7544 "GET /member/my-books/ HTTP/1.1" 200 7818
+ERROR 2026-01-05 14:25:43,677 views 14028 7544 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:25:43,708 log 14028 7544 Internal Server Error: /issues/return/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 169, in return_issue_ajax
+    issue = models.Issue.objects.get(
+        id=issue_id,
+        member=user_profile,
+        returned_at__isnull=True
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+LYMSApp.models.Issue.DoesNotExist: Issue matching query does not exist.
+ERROR 2026-01-05 14:25:43,714 basehttp 14028 7544 "POST /issues/return/ HTTP/1.1" 500 2055
+INFO 2026-01-05 14:27:49,418 basehttp 14028 7544 "GET /member/reserve-book/ HTTP/1.1" 200 7006
+INFO 2026-01-05 14:27:49,516 basehttp 14028 7544 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:27:49,516 basehttp 14028 3908 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 14:27:58,347 basehttp 14028 3908 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+INFO 2026-01-05 14:31:59,211 autoreload 14028 16792 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-05 14:32:06,180 autoreload 14184 10868 Watching for file changes with StatReloader
+INFO 2026-01-05 14:32:06,922 basehttp 14184 5392 "GET /member/my-books/ HTTP/1.1" 200 7818
+INFO 2026-01-05 14:32:07,266 basehttp 14184 5392 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:32:07,271 basehttp 14184 11164 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 14:32:11,687 basehttp 14184 11164 "GET /member/my-books/ HTTP/1.1" 200 7818
+INFO 2026-01-05 14:33:46,203 autoreload 14184 10868 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-05 14:33:48,625 autoreload 2372 7400 Watching for file changes with StatReloader
+INFO 2026-01-05 14:33:51,653 basehttp 2372 1884 "GET /member/my-books/ HTTP/1.1" 200 7818
+INFO 2026-01-05 14:33:51,792 basehttp 2372 1884 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:33:51,808 basehttp 2372 1884 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 14:34:02,194 autoreload 2372 7400 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-05 14:34:04,362 autoreload 17760 724 Watching for file changes with StatReloader
+INFO 2026-01-05 14:34:09,579 basehttp 17760 17368 "GET /member/my-books/ HTTP/1.1" 200 6203
+INFO 2026-01-05 14:37:52,355 basehttp 17760 17368 "GET /member/reserve-book/ HTTP/1.1" 200 7006
+INFO 2026-01-05 14:37:52,621 basehttp 17760 17368 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-05 14:37:52,630 basehttp 17760 17368 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-05 14:38:18,308 basehttp 17760 17368 "GET /books/search/?q=a%20pale%20 HTTP/1.1" 200 208
+INFO 2026-01-05 14:38:27,735 basehttp 17760 17368 "POST /books/reserve/ HTTP/1.1" 200 17
+INFO 2026-01-05 14:38:28,090 basehttp 17760 17368 "GET /books/search/?q=a%20pale%20 HTTP/1.1" 200 209
+INFO 2026-01-05 14:38:38,655 basehttp 17760 17368 "GET /member/my-books/ HTTP/1.1" 200 7826
+INFO 2026-01-05 14:38:47,476 basehttp 17760 17368 "POST /issues/return/ HTTP/1.1" 200 17
