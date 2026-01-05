@@ -209,13 +209,23 @@ def search_books_ajax(request):
 
 @login_required
 def reserve_book_ajax(request):
+    current_user = request.user
+    user_profile = models.Profile.objects.filter(user=current_user).first()
+    
     book_id = request.POST.get('book_id')
+    
+    active_issue = models.Issue.objects.filter(
+        copy=OuterRef('pk'),
+        returned_at__isnull=True
+    )
 
     # Find a free copy
     free_copy = models.BookCopy.objects.filter(
         book_id=book_id
-    ).exclude(
-        issue__returned_at__isnull=True
+    ).annotate(
+        has_active_issue=Exists(active_issue)
+    ).filter(
+        has_active_issue=False
     ).first()
 
     if not free_copy:
@@ -225,7 +235,7 @@ def reserve_book_ajax(request):
         })
 
     models.Issue.objects.create(
-        member=request.user.profile,
+        member=user_profile,
         copy=free_copy,
         issued_at=timezone.now().date(),
         due_at=timezone.now().date() + timedelta(days=14)

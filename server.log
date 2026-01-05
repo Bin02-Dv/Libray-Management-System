@@ -1746,3 +1746,237 @@ INFO 2026-01-04 18:22:18,072 basehttp 20636 3748 "GET /member/my-books/ HTTP/1.1
 INFO 2026-01-04 18:22:24,320 basehttp 20636 3748 "GET /member/reserve-book/ HTTP/1.1" 200 6676
 INFO 2026-01-04 18:22:31,493 basehttp 20636 3748 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
 INFO 2026-01-04 18:22:38,524 basehttp 20636 3748 "POST /books/reserve/ HTTP/1.1" 200 52
+INFO 2026-01-04 18:43:39,952 autoreload 11752 13032 Watching for file changes with StatReloader
+ERROR 2026-01-04 18:43:56,087 views 11752 14540 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 142, in member_reserve_books
+    return render(request, "members/reserve-books.html", context)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 9: 'static'. Did you forget to register or load this tag?
+ERROR 2026-01-04 18:43:56,327 log 11752 14540 Internal Server Error: /member/reserve-book/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 142, in member_reserve_books
+    return render(request, "members/reserve-books.html", context)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 9: 'static'. Did you forget to register or load this tag?
+ERROR 2026-01-04 18:43:56,333 basehttp 11752 14540 "GET /member/reserve-book/ HTTP/1.1" 500 2055
+INFO 2026-01-04 18:44:17,148 basehttp 11752 14540 "GET /member/reserve-book/ HTTP/1.1" 200 7005
+INFO 2026-01-04 18:44:17,252 basehttp 11752 14540 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 18:44:17,253 basehttp 11752 24348 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 18:44:31,101 basehttp 11752 24348 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+INFO 2026-01-04 18:44:36,607 basehttp 11752 24348 "POST /books/reserve/ HTTP/1.1" 200 52
+INFO 2026-01-04 18:47:03,380 basehttp 11752 24348 "GET /member/reserve-book/ HTTP/1.1" 200 7075
+INFO 2026-01-04 18:47:03,449 basehttp 11752 24348 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 18:47:03,452 basehttp 11752 14540 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 18:47:35,092 basehttp 11752 21728 "GET /books/search/?q=a%20pale%20green%20eye HTTP/1.1" 200 208
+INFO 2026-01-04 18:48:02,166 basehttp 11752 21728 "GET /member/reserve-book/ HTTP/1.1" 200 7089
+INFO 2026-01-04 18:48:18,938 basehttp 11752 21728 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+INFO 2026-01-04 18:48:21,732 basehttp 11752 21728 "POST /books/reserve/ HTTP/1.1" 200 52
+INFO 2026-01-04 18:51:16,730 basehttp 11752 21728 "GET /static/css/toast.css HTTP/1.1" 304 0
+WARNING 2026-01-04 18:51:16,751 views 11752 21728 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 18:51:16,773 log 11752 21728 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 18:51:16,774 basehttp 11752 21728 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 18:51:18,269 basehttp 11752 21728 "GET /member/reserve-book/ HTTP/1.1" 200 7186
+WARNING 2026-01-04 18:51:18,364 views 11752 21728 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 18:51:18,366 log 11752 21728 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-01-04 18:51:18,376 basehttp 11752 21728 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 18:51:18,405 basehttp 11752 21728 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 18:51:26,104 basehttp 11752 21728 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+INFO 2026-01-04 18:51:28,744 basehttp 11752 21728 "POST /books/reserve/ HTTP/1.1" 200 52
+INFO 2026-01-04 18:53:29,432 autoreload 11752 13032 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 18:53:35,792 autoreload 5540 13104 Watching for file changes with StatReloader
+INFO 2026-01-04 18:54:00,988 basehttp 5540 20232 "GET /member/reserve-book/ HTTP/1.1" 200 7006
+WARNING 2026-01-04 18:54:01,287 views 5540 20232 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-01-04 18:54:01,289 basehttp 5540 24044 "GET /static/css/toast.css HTTP/1.1" 304 0
+WARNING 2026-01-04 18:54:01,302 log 5540 20232 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-01-04 18:54:01,341 basehttp 5540 24044 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-04 18:54:01,352 basehttp 5540 20232 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 18:54:14,894 basehttp 5540 20232 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+ERROR 2026-01-04 18:54:17,133 views 5540 20232 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 235, in reserve_book_ajax
+    member=request.user.profile,
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AuthModel' object has no attribute 'profile'
+ERROR 2026-01-04 18:54:17,227 log 5540 20232 Internal Server Error: /books/reserve/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 235, in reserve_book_ajax
+    member=request.user.profile,
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AuthModel' object has no attribute 'profile'
+ERROR 2026-01-04 18:54:17,235 basehttp 5540 20232 "POST /books/reserve/ HTTP/1.1" 500 2055
+INFO 2026-01-04 18:55:57,663 autoreload 5540 13104 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 18:56:02,035 autoreload 24348 11468 Watching for file changes with StatReloader
+INFO 2026-01-04 18:56:02,968 basehttp 24348 17692 "GET /member/reserve-book/ HTTP/1.1" 200 7006
+WARNING 2026-01-04 18:56:06,793 views 24348 17692 Page not found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-01-04 18:56:06,797 basehttp 24348 13676 "GET /static/css/toast.css HTTP/1.1" 304 0
+WARNING 2026-01-04 18:56:06,810 log 24348 17692 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-01-04 18:56:06,836 basehttp 24348 13676 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-04 18:56:06,848 basehttp 24348 17692 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1950
+INFO 2026-01-04 18:56:17,396 basehttp 24348 17692 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+INFO 2026-01-04 18:56:19,632 basehttp 24348 17692 "POST /books/reserve/ HTTP/1.1" 200 17
+INFO 2026-01-04 18:56:19,661 basehttp 24348 17692 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 18:56:54,131 basehttp 24348 17692 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-01-04 18:56:54,147 basehttp 24348 17692 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 18:57:03,332 basehttp 24348 17692 "POST /login/ HTTP/1.1" 200 70
+INFO 2026-01-04 18:57:04,911 basehttp 24348 17692 "GET /dash/ HTTP/1.1" 200 4730
+INFO 2026-01-04 18:57:13,569 basehttp 24348 17692 "GET /manage-members/ HTTP/1.1" 200 22681
+INFO 2026-01-04 18:57:13,621 basehttp 24348 13676 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 18:57:13,621 basehttp 24348 17692 "GET /static/css/toast.css HTTP/1.1" 304 0
+WARNING 2026-01-04 18:57:15,135 views 24348 17692 Page not found: /media/default-book-cover.jpg
+WARNING 2026-01-04 18:57:15,136 log 24348 17692 Not Found: /media/default-book-cover.jpg
+WARNING 2026-01-04 18:57:15,138 basehttp 24348 17692 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
