@@ -1,0 +1,1 @@
+web: gunicorn LYMS.wsgi:application --bind :$PORT
