@@ -34,4 +34,6 @@ urlpatterns = [
     path('books/update/', views.update_book_ajax, name='update_book_ajax'),
     path('books/search/', views.search_books_ajax, name='search_books_ajax'),
     path('books/reserve/', views.reserve_book_ajax, name='reserve_book_ajax'),
+    path('issues/renew/', views.renew_issue_ajax, name='renew_issue_ajax'),
+    path('issues/return/', views.return_issue_ajax, name='return_issue_ajax'),
 ]
