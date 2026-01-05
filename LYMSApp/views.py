@@ -492,8 +492,6 @@ def renew_book(request):
         "new_due": issue.due_at
     })
 
-
-
 @login_required(login_url='/login/')
 def admin_fines(request):
     current_user = models.Profile.objects.filter(user=request.user).first()

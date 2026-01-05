@@ -1980,3 +1980,12 @@ INFO 2026-01-04 18:57:13,621 basehttp 24348 17692 "GET /static/css/toast.css HTT
 WARNING 2026-01-04 18:57:15,135 views 24348 17692 Page not found: /media/default-book-cover.jpg
 WARNING 2026-01-04 18:57:15,136 log 24348 17692 Not Found: /media/default-book-cover.jpg
 WARNING 2026-01-04 18:57:15,138 basehttp 24348 17692 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
+INFO 2026-01-04 19:16:10,385 autoreload 23068 17220 Watching for file changes with StatReloader
+INFO 2026-01-04 19:16:21,968 basehttp 23068 19804 "GET /manage-members/ HTTP/1.1" 200 22682
+INFO 2026-01-04 19:16:22,040 basehttp 23068 19804 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 19:16:22,041 basehttp 23068 9152 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-04 19:16:28,961 views 23068 9152 Page not found: /media/default-book-cover.jpg
+WARNING 2026-01-04 19:16:28,970 log 23068 9152 Not Found: /media/default-book-cover.jpg
+WARNING 2026-01-04 19:16:28,971 basehttp 23068 9152 "GET /media/default-book-cover.jpg HTTP/1.1" 404 1950
+INFO 2026-01-04 19:22:33,578 autoreload 23068 17220 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 19:22:36,064 autoreload 1068 19852 Watching for file changes with StatReloader
