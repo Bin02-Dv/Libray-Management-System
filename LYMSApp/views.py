@@ -184,13 +184,18 @@ def search_books_ajax(request):
     results = []
 
     for book in books:
+        active_issue = models.Issue.objects.filter(
+            copy=OuterRef('pk'),
+            returned_at__isnull=True
+        )
+
         available_copy = models.BookCopy.objects.filter(
             book=book
-        ).exclude(
-            issue__returned_at__isnull=True
+        ).annotate(
+            has_active_issue=Exists(active_issue)
+        ).filter(
+            has_active_issue=False
         ).first()
-        
-        print(available_copy)
 
         results.append({
             'id': book.id,

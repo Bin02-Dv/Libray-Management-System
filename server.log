@@ -1724,3 +1724,25 @@ INFO 2026-01-04 15:31:57,757 basehttp 3748 22376 "GET /member/dash/ HTTP/1.1" 20
 INFO 2026-01-04 15:32:02,096 basehttp 3748 22376 "GET /member/reserve-book/ HTTP/1.1" 200 6676
 INFO 2026-01-04 15:32:11,173 basehttp 3748 22376 "GET /books/search/?q=a%20pale%20green%20eye HTTP/1.1" 200 209
 INFO 2026-01-04 15:32:29,744 basehttp 3748 22376 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 206
+INFO 2026-01-04 15:40:10,262 autoreload 18940 19480 Watching for file changes with StatReloader
+INFO 2026-01-04 15:40:36,840 basehttp 18940 17564 "GET /member/fines/ HTTP/1.1" 200 4785
+INFO 2026-01-04 15:44:16,285 autoreload 18940 19480 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py changed, reloading.
+INFO 2026-01-04 15:44:24,974 autoreload 20636 8228 Watching for file changes with StatReloader
+INFO 2026-01-04 16:09:14,865 basehttp 20636 24228 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-01-04 16:09:14,957 basehttp 20636 24228 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 16:09:15,183 basehttp 20636 24228 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 16:09:15,189 basehttp 20636 9568 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 16:09:24,759 basehttp 20636 9568 "GET / HTTP/1.1" 200 4574
+INFO 2026-01-04 16:12:43,170 basehttp 20636 9736 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 16:12:43,364 basehttp 20636 9736 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 16:12:43,365 basehttp 20636 20984 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 18:21:57,500 basehttp 20636 9680 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-04 18:21:57,826 basehttp 20636 9680 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-04 18:21:57,827 basehttp 20636 3748 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-04 18:22:11,519 basehttp 20636 3748 "POST /login/ HTTP/1.1" 200 77
+INFO 2026-01-04 18:22:13,184 basehttp 20636 3748 "GET /member/dash/ HTTP/1.1" 200 4943
+INFO 2026-01-04 18:22:16,384 basehttp 20636 3748 "GET /member/reserve-book/ HTTP/1.1" 200 6676
+INFO 2026-01-04 18:22:18,072 basehttp 20636 3748 "GET /member/my-books/ HTTP/1.1" 200 5091
+INFO 2026-01-04 18:22:24,320 basehttp 20636 3748 "GET /member/reserve-book/ HTTP/1.1" 200 6676
+INFO 2026-01-04 18:22:31,493 basehttp 20636 3748 "GET /books/search/?q=life%20in%20science HTTP/1.1" 200 205
+INFO 2026-01-04 18:22:38,524 basehttp 20636 3748 "POST /books/reserve/ HTTP/1.1" 200 52
