@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from LYMSApp.views import page_404, page_500
+
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -25,8 +26,7 @@ urlpatterns = [
     path('', include('LYMSApp.urls'))
 ]
 
+urlpatterns = urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = page_404
 handler500 = page_500
-
-urlpatterns = urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

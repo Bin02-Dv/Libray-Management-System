@@ -57,7 +57,7 @@ class Books(models.Model):
     publisher = models.CharField(max_length=100)
     category = models.CharField(max_length=50)
     # cover_image = CloudinaryField('LBRY', folder='LBRY/books', blank=True, null=True)
-    cover_image = models.ImageField(upload_to='books/', blank=True, null=True)
+    cover_image = models.FileField(upload_to='books/', blank=True, null=True)
 
     def available_copies(self):
         return self.book_copies.filter(is_available=True).count()
