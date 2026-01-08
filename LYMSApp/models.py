@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
-from cloudinary.models import CloudinaryField
+# from cloudinary.models import CloudinaryField
 from django.utils import timezone
 
 # Create your models here.
@@ -56,7 +56,8 @@ class Books(models.Model):
     ISBN = models.CharField(max_length=20, unique=True)
     publisher = models.CharField(max_length=100)
     category = models.CharField(max_length=50)
-    cover_image = CloudinaryField('LBRY', folder='LBRY/books', blank=True, null=True)
+    # cover_image = CloudinaryField('LBRY', folder='LBRY/books', blank=True, null=True)
+    cover_image = models.ImageField(upload_to='books/', blank=True, null=True)
 
     def available_copies(self):
         return self.book_copies.filter(is_available=True).count()

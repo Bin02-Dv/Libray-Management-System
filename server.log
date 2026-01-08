@@ -8,3 +8,371 @@ INFO 2026-01-08 10:10:11,610 basehttp 20748 10792 "GET /static/css/toast.css HTT
 INFO 2026-01-08 10:10:11,728 basehttp 20748 21776 "GET /static/js/toast.js HTTP/1.1" 200 607
 INFO 2026-01-08 10:12:06,078 autoreload 20748 5812 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMS\settings.py changed, reloading.
 INFO 2026-01-08 10:12:09,335 autoreload 14368 9180 Watching for file changes with StatReloader
+INFO 2026-01-08 10:30:12,534 autoreload 2188 21296 Watching for file changes with StatReloader
+WARNING 2026-01-08 10:30:28,419 views 2188 21956 Page not found: /admin
+INFO 2026-01-08 10:30:28,433 basehttp 2188 21956 "GET /admin HTTP/1.1" 301 0
+INFO 2026-01-08 10:30:28,683 basehttp 2188 14984 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-01-08 10:30:30,063 basehttp 2188 14984 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-01-08 10:30:30,293 basehttp 2188 4656 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2026-01-08 10:30:30,329 basehttp 2188 14984 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2026-01-08 10:30:30,355 basehttp 2188 4656 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-01-08 10:30:30,370 basehttp 2188 14984 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-01-08 10:30:30,427 basehttp 2188 4656 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2026-01-08 10:30:30,665 basehttp 2188 4656 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-01-08 10:30:30,674 basehttp 2188 14984 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-01-08 10:45:10,034 basehttp 2188 7076 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-01-08 10:45:10,549 basehttp 2188 7076 "GET /admin/ HTTP/1.1" 200 7814
+INFO 2026-01-08 10:45:10,678 basehttp 2188 7076 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:45:10,682 basehttp 2188 12268 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:45:10,695 basehttp 2188 12268 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:45:10,705 basehttp 2188 12268 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:45:10,710 basehttp 2188 12268 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:45:10,723 basehttp 2188 12268 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:45:10,872 basehttp 2188 7076 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-01-08 10:45:11,119 basehttp 2188 7076 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-01-08 10:45:11,127 basehttp 2188 12268 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-01-08 10:45:16,811 basehttp 2188 12268 "GET /admin/LYMSApp/authmodel/ HTTP/1.1" 200 10049
+INFO 2026-01-08 10:45:16,944 basehttp 2188 12268 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2026-01-08 10:45:17,110 basehttp 2188 18112 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-01-08 10:45:17,145 basehttp 2188 2768 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-01-08 10:45:17,153 basehttp 2188 12268 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-01-08 10:45:17,167 basehttp 2188 7076 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:45:17,176 basehttp 2188 18652 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-01-08 10:45:17,246 basehttp 2188 18112 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-01-08 10:45:17,254 basehttp 2188 2768 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-01-08 10:45:17,335 basehttp 2188 18436 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 200 87533
+INFO 2026-01-08 10:45:17,419 basehttp 2188 18436 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-01-08 10:45:18,360 basehttp 2188 12268 "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 200 163184
+INFO 2026-01-08 10:45:18,733 basehttp 2188 12268 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-01-08 10:45:24,347 basehttp 2188 12268 "GET /admin/LYMSApp/authmodel/1/change/ HTTP/1.1" 200 22830
+INFO 2026-01-08 10:45:24,408 basehttp 2188 18436 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:45:24,422 basehttp 2188 12268 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2026-01-08 10:45:24,460 basehttp 2188 2768 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2026-01-08 10:45:24,469 basehttp 2188 18112 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2026-01-08 10:45:24,476 basehttp 2188 18436 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+INFO 2026-01-08 10:45:24,509 basehttp 2188 12268 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-01-08 10:45:24,537 basehttp 2188 18436 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-01-08 10:45:24,642 basehttp 2188 12268 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2026-01-08 10:45:24,645 basehttp 2188 18436 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2026-01-08 10:45:36,571 basehttp 2188 18436 "POST /admin/LYMSApp/authmodel/1/change/ HTTP/1.1" 302 0
+INFO 2026-01-08 10:45:36,594 basehttp 2188 18436 "GET /admin/LYMSApp/authmodel/ HTTP/1.1" 200 10260
+INFO 2026-01-08 10:45:36,650 basehttp 2188 18436 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:45:36,726 basehttp 2188 18436 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2026-01-08 10:46:07,505 basehttp 2188 6996 "GET /admin/LYMSApp/profile/ HTTP/1.1" 200 8767
+INFO 2026-01-08 10:46:07,551 basehttp 2188 6996 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:46:24,872 basehttp 2188 6996 "GET /admin/LYMSApp/profile/add/ HTTP/1.1" 200 11924
+INFO 2026-01-08 10:46:24,907 basehttp 2188 6996 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,908 basehttp 2188 21600 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,923 basehttp 2188 6996 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,927 basehttp 2188 21600 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,931 basehttp 2188 6996 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,933 basehttp 2188 21600 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,942 basehttp 2188 21600 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,948 basehttp 2188 6996 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:46:24,949 basehttp 2188 21600 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,954 basehttp 2188 6996 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,957 basehttp 2188 21600 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,962 basehttp 2188 6996 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,968 basehttp 2188 21600 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,968 basehttp 2188 6996 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,970 basehttp 2188 21600 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,974 basehttp 2188 6996 "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:24,986 basehttp 2188 6996 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:25,002 basehttp 2188 6996 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:25,012 basehttp 2188 6996 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:25,021 basehttp 2188 6996 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:25,040 basehttp 2188 21600 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:25,067 basehttp 2188 6996 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2026-01-08 10:46:38,730 basehttp 2188 6996 "POST /admin/LYMSApp/profile/add/ HTTP/1.1" 302 0
+INFO 2026-01-08 10:46:38,765 basehttp 2188 6996 "GET /admin/LYMSApp/profile/ HTTP/1.1" 200 10283
+INFO 2026-01-08 10:46:38,814 basehttp 2188 6996 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:38,823 basehttp 2188 21600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:46:38,849 basehttp 2188 21600 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:38,866 basehttp 2188 21600 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:38,868 basehttp 2188 6996 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:45,238 basehttp 2188 6996 "POST /admin/logout/ HTTP/1.1" 200 3568
+INFO 2026-01-08 10:46:50,283 basehttp 2188 6996 "GET / HTTP/1.1" 200 4574
+INFO 2026-01-08 10:46:54,284 basehttp 2188 6996 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-08 10:46:54,335 basehttp 2188 6996 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:46:54,335 basehttp 2188 21600 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:47:05,476 basehttp 2188 6996 "POST /login/ HTTP/1.1" 200 70
+INFO 2026-01-08 10:47:09,486 basehttp 2188 6996 "GET /dash/ HTTP/1.1" 200 4728
+INFO 2026-01-08 10:47:14,366 basehttp 2188 6996 "GET /manage-books/ HTTP/1.1" 200 16367
+INFO 2026-01-08 10:48:17,362 basehttp 2188 6996 "POST /manage-books/ HTTP/1.1" 200 57
+INFO 2026-01-08 10:48:18,909 basehttp 2188 6996 "GET /manage-books/ HTTP/1.1" 200 17290
+INFO 2026-01-08 10:48:18,967 basehttp 2188 6996 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:48:18,967 basehttp 2188 21600 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-08 10:48:18,994 views 2188 6996 Page not found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:48:19,012 log 2188 6996 Not Found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:48:19,015 basehttp 2188 6996 "GET /media/books/978-3-031-23717-1.jfif HTTP/1.1" 404 1950
+INFO 2026-01-08 10:49:58,131 autoreload 2188 21296 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMS\urls.py changed, reloading.
+INFO 2026-01-08 10:50:00,985 autoreload 19740 9012 Watching for file changes with StatReloader
+INFO 2026-01-08 10:50:13,323 basehttp 19740 10664 "GET /manage-books/ HTTP/1.1" 200 17290
+INFO 2026-01-08 10:50:13,502 basehttp 19740 10664 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:50:13,504 basehttp 19740 10664 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-08 10:50:13,517 views 19740 10664 Page not found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:50:13,526 log 19740 10664 Not Found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:50:13,528 basehttp 19740 10664 "GET /media/books/978-3-031-23717-1.jfif HTTP/1.1" 404 1950
+INFO 2026-01-08 10:51:48,771 basehttp 19740 10664 "GET /admin/ HTTP/1.1" 200 8566
+INFO 2026-01-08 10:51:48,816 basehttp 19740 10664 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,822 basehttp 19740 10664 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,832 basehttp 19740 10664 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,836 basehttp 19740 10664 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,838 basehttp 19740 10664 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,840 basehttp 19740 10664 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,852 basehttp 19740 10664 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,865 basehttp 19740 10664 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:48,868 basehttp 19740 10664 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,393 basehttp 19740 10664 "GET /admin/LYMSApp/books/ HTTP/1.1" 200 10046
+INFO 2026-01-08 10:51:55,455 basehttp 19740 10664 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,458 basehttp 19740 17328 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,459 basehttp 19740 8760 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,459 basehttp 19740 8248 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,461 basehttp 19740 12912 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,469 basehttp 19740 9688 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:51:55,479 basehttp 19740 10664 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,482 basehttp 19740 17328 "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,494 basehttp 19740 8248 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,499 basehttp 19740 8760 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,521 basehttp 19740 8760 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:51:55,573 basehttp 19740 8760 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:52:00,302 basehttp 19740 8760 "POST /admin/LYMSApp/books/ HTTP/1.1" 200 8930
+INFO 2026-01-08 10:52:00,708 basehttp 19740 8760 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2026-01-08 10:52:02,070 basehttp 19740 8760 "POST /admin/LYMSApp/books/ HTTP/1.1" 302 0
+INFO 2026-01-08 10:52:02,100 basehttp 19740 8760 "GET /admin/LYMSApp/books/ HTTP/1.1" 200 8888
+INFO 2026-01-08 10:52:02,146 basehttp 19740 8760 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-08 10:52:02,172 basehttp 19740 8760 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-01-08 10:52:05,657 basehttp 19740 8760 "GET /manage-books/ HTTP/1.1" 200 16367
+INFO 2026-01-08 10:52:05,996 basehttp 19740 8760 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:52:05,998 basehttp 19740 8248 "GET /static/js/toast.js HTTP/1.1" 304 0
+INFO 2026-01-08 10:52:57,116 basehttp 19740 8760 "POST /manage-books/ HTTP/1.1" 200 57
+INFO 2026-01-08 10:52:58,674 basehttp 19740 8760 "GET /manage-books/ HTTP/1.1" 200 17273
+WARNING 2026-01-08 10:52:58,731 views 19740 8760 Page not found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:52:58,736 log 19740 8760 Not Found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:52:58,743 basehttp 19740 8760 "GET /media/books/978-3-031-23717-1.jfif HTTP/1.1" 404 1950
+ERROR 2026-01-08 10:55:54,774 views 19740 8760 Internal Server Error (500)
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: LYMSApp_books.ISBN
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 325, in admin_manage_book
+    new_book = models.Books.objects.create(
+        title=title, author=author, ISBN=ISBN, publisher=publisher, category=category, cover_image=cover_image
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: LYMSApp_books.ISBN
+ERROR 2026-01-08 10:55:55,739 log 19740 8760 Internal Server Error: /manage-books/
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: LYMSApp_books.ISBN
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMSApp\views.py", line 325, in admin_manage_book
+    new_book = models.Books.objects.create(
+        title=title, author=author, ISBN=ISBN, publisher=publisher, category=category, cover_image=cover_image
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: LYMSApp_books.ISBN
+ERROR 2026-01-08 10:55:55,750 basehttp 19740 8760 "POST /manage-books/ HTTP/1.1" 500 2055
+INFO 2026-01-08 10:56:20,232 basehttp 19740 8760 "POST /manage-books/ HTTP/1.1" 200 57
+INFO 2026-01-08 10:56:21,817 basehttp 19740 8760 "GET /manage-books/ HTTP/1.1" 200 18378
+INFO 2026-01-08 10:56:21,900 basehttp 19740 8760 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:56:21,904 basehttp 19740 8248 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-08 10:56:21,907 views 19740 8760 Page not found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:56:21,909 views 19740 8248 Page not found: /media/books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:56:21,912 log 19740 8760 Not Found: /media/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:56:21,914 log 19740 8248 Not Found: /media/books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:56:21,915 basehttp 19740 8760 "GET /media/books/978-3-031-23717-1.jfif HTTP/1.1" 404 1950
+WARNING 2026-01-08 10:56:21,916 basehttp 19740 8248 "GET /media/books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950
+INFO 2026-01-08 10:57:33,489 basehttp 19740 8248 "GET /manage-books/ HTTP/1.1" 200 18364
+INFO 2026-01-08 10:57:33,614 basehttp 19740 8248 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:57:33,620 basehttp 19740 8760 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-08 10:57:33,629 views 19740 8760 Page not found: /manage-books/books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:57:33,631 views 19740 8248 Page not found: /manage-books/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:57:33,636 log 19740 8248 Not Found: /manage-books/books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:57:33,634 log 19740 8760 Not Found: /manage-books/books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:57:33,637 basehttp 19740 8248 "GET /manage-books/books/978-3-031-23717-1.jfif HTTP/1.1" 404 1950
+WARNING 2026-01-08 10:57:33,640 basehttp 19740 8760 "GET /manage-books/books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950
+INFO 2026-01-08 10:59:13,380 basehttp 19740 8760 "GET /manage-books/ HTTP/1.1" 200 18408
+INFO 2026-01-08 10:59:13,422 basehttp 19740 8760 "GET /static/css/toast.css HTTP/1.1" 304 0
+INFO 2026-01-08 10:59:13,423 basehttp 19740 8248 "GET /static/js/toast.js HTTP/1.1" 304 0
+WARNING 2026-01-08 10:59:13,434 views 19740 8760 Page not found: /books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:59:13,440 views 19740 8248 Page not found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:59:13,443 log 19740 8760 Not Found: /books/978-3-031-23717-1.jfif
+WARNING 2026-01-08 10:59:13,444 log 19740 8248 Not Found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:59:13,446 basehttp 19740 8760 "GET /books/978-3-031-23717-1.jfif HTTP/1.1" 404 1950
+WARNING 2026-01-08 10:59:13,448 basehttp 19740 8248 "GET /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950
+WARNING 2026-01-08 10:59:42,023 views 19740 8248 Page not found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:59:42,026 log 19740 8248 Not Found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 10:59:42,030 basehttp 19740 8248 "GET /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950
+WARNING 2026-01-08 11:01:18,170 views 19740 8248 Page not found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 11:01:18,172 log 19740 8248 Not Found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 11:01:18,174 basehttp 19740 8248 "GET /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950
+INFO 2026-01-08 11:02:10,179 autoreload 12952 12136 Watching for file changes with StatReloader
+WARNING 2026-01-08 11:02:14,051 views 12952 6600 Page not found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 11:02:14,063 log 12952 6600 Not Found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 11:02:14,065 basehttp 12952 6600 "GET /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950
+WARNING 2026-01-08 11:20:24,298 views 12952 17944 Page not found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 11:20:24,377 log 12952 17944 Not Found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 11:20:24,386 basehttp 12952 17944 "GET /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950
+INFO 2026-01-08 11:20:27,194 basehttp 12952 17944 "GET /admin/LYMSApp/books/ HTTP/1.1" 200 10328
+INFO 2026-01-08 13:03:15,347 autoreload 12952 12136 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMS\urls.py changed, reloading.
+INFO 2026-01-08 13:03:19,674 autoreload 7640 20408 Watching for file changes with StatReloader
+WARNING 2026-01-08 13:04:45,083 views 7640 10612 Page not found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 13:04:45,109 log 7640 10612 Not Found: /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg
+WARNING 2026-01-08 13:04:45,111 basehttp 7640 10612 "GET /books/pale-green-eye-e1b57db5f4223f6f36ad3d6014ea2ada_G2CZTiN.jpg HTTP/1.1" 404 1950

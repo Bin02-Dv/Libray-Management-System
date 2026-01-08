@@ -27,7 +27,7 @@
                 {% for book in books %}
                 <tr id="book-row-{{ book.id }}" class="border-t hover:bg-gray-50">
                     <td class="px-6 py-4">
-                        <img src="{{ book.cover_image.url }}" class="w-12 h-16 object-cover rounded"/>
+                        <img src="http://localhost:8001{{ book.cover_image.url }}" class="w-12 h-16 object-cover rounded"/>
                     </td>
                     <td class="px-6 py-4 font-medium book-title">{{ book.title }}</td>
                     <td class="px-6 py-4 book-author">{{ book.author }}</td>
