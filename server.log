@@ -1,0 +1,10 @@
+INFO 2026-01-08 10:09:41,864 autoreload 20748 5812 Watching for file changes with StatReloader
+INFO 2026-01-08 10:09:57,162 basehttp 20748 10792 "GET / HTTP/1.1" 200 4574
+WARNING 2026-01-08 10:10:06,642 views 20748 10792 Page not found: /favicon.ico
+WARNING 2026-01-08 10:10:06,707 log 20748 10792 Not Found: /favicon.ico
+WARNING 2026-01-08 10:10:06,709 basehttp 20748 10792 "GET /favicon.ico HTTP/1.1" 404 1950
+INFO 2026-01-08 10:10:11,533 basehttp 20748 10792 "GET /login/ HTTP/1.1" 200 4678
+INFO 2026-01-08 10:10:11,610 basehttp 20748 10792 "GET /static/css/toast.css HTTP/1.1" 200 1233
+INFO 2026-01-08 10:10:11,728 basehttp 20748 21776 "GET /static/js/toast.js HTTP/1.1" 200 607
+INFO 2026-01-08 10:12:06,078 autoreload 20748 5812 C:\Users\ALAMEEN\Documents\Documents\my_projects\BBMS\LYMS\LYMS\settings.py changed, reloading.
+INFO 2026-01-08 10:12:09,335 autoreload 14368 9180 Watching for file changes with StatReloader
